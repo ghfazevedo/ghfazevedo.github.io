@@ -5,8 +5,11 @@
 
 # Appearance
 appearance:
+  theme: Rose
   mode: system
   color: emerald
+  font: Native
+  font_size: L
 
 # SEO
 marketing:
@@ -35,7 +38,7 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Your Name"
+      text: "Guilherme Azevedo"
 
 # Site footer
 footer:
