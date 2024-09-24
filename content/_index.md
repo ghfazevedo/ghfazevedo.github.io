@@ -15,16 +15,16 @@ sections:
       username: admin
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Know more about me...
-        url: /about.md
+#      button:
+#        text: Know more about me...
+#        url: /about.md
     design:
       css_class: dark
       background:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: assets/media/Background.svg
+          filename: assets/media/background.svg
           filters:
             brightness: 1.0
           size: cover
