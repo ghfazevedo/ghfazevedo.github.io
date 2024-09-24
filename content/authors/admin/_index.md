@@ -7,7 +7,7 @@ first_name: Guilherme
 last_name: Azevedo
 
 # Name pronunciation (optional)
-name_pronunciation: "["ɡiˈʎɛɦ.mi"]"
+name_pronunciation: [ɡiˈʎɛɦ.mi"]
 
 # Status emoji
 #status:
