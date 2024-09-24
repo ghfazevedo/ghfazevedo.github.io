@@ -6,8 +6,8 @@
 # Appearance
 appearance:
   mode: system
-  color: black
-  font: black
+  color: emerald
+  font: Minimal
   font_size: l
 
 # SEO
