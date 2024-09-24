@@ -5,10 +5,12 @@
 
 # Appearance
 appearance:
+  theme: dark
   mode: system
   color: emerald
   font: Minimal
   font_size: l
+  font_color: blue
 
 # SEO
 marketing:
