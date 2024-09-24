@@ -7,7 +7,7 @@ first_name: Guilherme
 last_name: Azevedo
 
 # Name pronunciation (optional)
-name_pronunciation: "Pronunciation (IPA): [ɡiˈʎɛɦ.mi]"
+name_pronunciation: "["ɡiˈʎɛɦ.mi"]"
 
 # Status emoji
 #status:
@@ -45,7 +45,7 @@ profiles:
     url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  - icon: assets/media/icons/Bluesky_Logo.svg
+  - icon: brands/bluesky
     url: https://bsky.app/profile/ghfazevedo.bsky.social
 
 interests:
