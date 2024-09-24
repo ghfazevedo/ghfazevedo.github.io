@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   theme: rose
-  mode: light
+  mode: system
   color: rose
   font: rose
   font_size: l
