@@ -183,8 +183,6 @@ interests:
 #      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is #a reat day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-## About Me
-
-Hi there!!  
+## Hi there!!  
 
 I am a Brazilian evolutionary biologist based in Ithaca, NY - USA. I am curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life and to reveal the role of the environment in driving species through their path. To achieve that, my research integrates over models and data from different disciplines and across scales. I use invaluable information from museum collections as well as data from field work to understand the micro and macro-evolutionary processes that shaped diversity and distribution of organisms from a perspective that integrates population genomics, phylogenetics, ecology and biogeography.

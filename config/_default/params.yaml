@@ -5,10 +5,10 @@
 
 # Appearance
 appearance:
-  theme: Dark
+  theme: rose
   mode: system
-  #color: emerald
-  font: native
+  color: black
+  font: rose
   font_size: l
 
 # SEO
