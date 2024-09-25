@@ -32,21 +32,25 @@ organizations:
 profiles:
   - icon: at-symbol
     url: 'mailto:gfernandesdeazeved@sdsu.edu'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/GuilhermeDoug1
+    label: E-mail me
   #- icon: brands/instagram
   #  url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/ghfazevedo
+    label: Check my GitHub repository
   #- icon: brands/linkedin
   #  url: https://www.linkedin.com/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
+    label: See my publications on Google Scholar profile
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  - icon: assets/media/icons/bluesky-brands-solid.svg
+  - icon: bluesky-brands-solid.svg
     url: https://bsky.app/profile/ghfazevedo.bsky.social
+    label: This is my BlueSky, if you are tired of Twitter
+  - icon: brands/x
+    url: https://x.com/GuilhermeDoug1
+    label: This is my X/Twitter, if you're still into it
 
 interests:
   - Diversity and evolution of Arachnids
