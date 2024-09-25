@@ -57,7 +57,7 @@ profiles:
 #  - Phylogenetic models
 #  - Biogeography, Systematics and Taxonomy
 
-#ducation:
+#education:
 # - area: PhD Artificial Intelligence
 #   institution: Stanford University
 #   date_start: 2016-01-01
@@ -189,11 +189,14 @@ profiles:
 
 ## Hi there!!  
 
-<p style="color:#000000 ">I am a Brazilian evolutionary biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse (over 52,000 species in many shapes, colors and habits), serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. I believe that the importance of biodiversity to the success of an ecosystem is analogous to the importance of cultural and ethnic diversity for humanity to thrive as a society. In this website you can learn a little bit more about me, my research, teaching and outreach. Please reach out if you have any question or suggestion, or if you are interested in collaborations. 
+<p style="color:#000000 ">I am a Brazilian biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse (over 52,000 species in many shapes, colors and habits), serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. It is important to pass along our discoveries to the general public creating a sene of awareness and admiration for nature. Only then we will be able to effectively conserve biodiversity for future generations. At last, I believe that the importance of biodiversity to the success of an ecosystem is analogous to the importance of cultural and ethnic diversity for humanity to thrive as a society. In this website you can learn a little bit more about me, my research, teaching and outreach.  
+Please reach out if you have any question, suggestion, or if you are interested in collaboration! 
 
 Cheers!
 
-Gui
+### *Gui*
+
+
 
 
 
