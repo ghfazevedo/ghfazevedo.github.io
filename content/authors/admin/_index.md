@@ -187,7 +187,38 @@ profiles:
 #      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is #a reat day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-# Hi there!!  
+## Hi there!!  
 
-<p style="color:#000000 ">I am a Brazilian evolutionary biologist based in Ithaca, NY - USA. I am curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life and to reveal the role of the environment in driving species through their path. To achieve that, my research integrates over models and data from different disciplines and across scales. I use invaluable information from museum collections as well as data from field work to understand the micro and macro-evolutionary processes that shaped diversity and distribution of organisms from a perspective that integrates population genomics, phylogenetics, ecology and biogeography.</p>
+<p style="color:#000000 ">I am a Brazilian evolutionary biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse (over 52,000 species in many shapes, colors and habits), serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. I believe that the importance of biodiversity to the success of an ecosystem is analogous to the importance of cultural and ethnic diversity for humanity to thrive as a society. In this website you can learn a little bit more about me, my research, teaching and outreach. Please reach out if you have any question or suggestion, or if you are interested in collaborations. 
+
+Cheers!
+
+Gui
+
+
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
