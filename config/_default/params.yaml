@@ -5,10 +5,11 @@
 
 # Appearance
 appearance:
+  day_night: false
   mode: light
   color: zinc
   font: Minimal
-  font_size: l
+  font_size: xl
 
 
 # SEO
@@ -42,6 +43,7 @@ header:
 
 # Site footer
 footer:
+  height: 10px
   copyright:
     notice: '© {year} Guilherme Azevedo. This work is licensed under {license}'
     license:
