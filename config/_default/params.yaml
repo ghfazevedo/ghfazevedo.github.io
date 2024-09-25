@@ -8,7 +8,7 @@ appearance:
   mode: light
   color: zinc
   font: Minimal
-  font_size: xl
+  font_size: XL
 
 
 # SEO
@@ -33,12 +33,27 @@ marketing:
 header:
   navbar:
     enable: true
+    # Align menu links: left (l), center (c), or right (r)
+    align: r
     blox: "navbar"
     fixed_to_top: true
     show_search: true
     show_theme_chooser: false
+    show_logo: true
     logo:
       text: "Guilherme Azevedo"
+    design:
+     css_class: bright
+     background:
+       color: white
+       image:
+         # Add your image background to `assets/media/`.
+         filename: oldmanuscript.png
+         filters:
+           brightness: 1.0
+         size: cover
+         position: center
+         parallax: false
 
 # Site footer
 footer:
