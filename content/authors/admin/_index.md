@@ -45,8 +45,8 @@ profiles:
     url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  #- icon: brands/bluesky
-  #  url: https://bsky.app/profile/ghfazevedo.bsky.social
+  - icon: <i class="fa-brands fa-bluesky"></i>
+    url: https://bsky.app/profile/ghfazevedo.bsky.social
 
 interests:
   - Diversity and evolution of Arachnids
