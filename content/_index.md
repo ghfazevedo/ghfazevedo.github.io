@@ -19,7 +19,7 @@ sections:
 #        text: Know more about me...
 #        url: /about.md
     design:
-      css_class: dark
+      css_class: bright
       background:
         color: white
         image:
