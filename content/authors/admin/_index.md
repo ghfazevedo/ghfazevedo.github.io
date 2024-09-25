@@ -45,7 +45,7 @@ profiles:
     url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  - icon: <i class="fa-brands fa-bluesky"></i>
+  - icon: assets/media/icons/bluesky-brands-solid.svg
     url: https://bsky.app/profile/ghfazevedo.bsky.social
 
 interests:
