@@ -45,17 +45,17 @@ profiles:
     label: See my publications on Google Scholar profile
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  - icon: brands/bluesky
+  - icon: <i class="fa-brands fa-font-awesome fa-bluesky"></i>
     url: https://bsky.app/profile/ghfazevedo.bsky.social
     label: This is my BlueSky, if you are tired of Twitter
   - icon: brands/x
     url: https://x.com/GuilhermeDoug1
     label: This is my X/Twitter, if you're still into it
 
-interests:
-  - Diversity and evolution of Arachnids
-  - Phylogenetic models
-  - Biogeography, Systematics and Taxonomy
+#interests:
+#  - Diversity and evolution of Arachnids
+#  - Phylogenetic models
+#  - Biogeography, Systematics and Taxonomy
 
 #ducation:
 # - area: PhD Artificial Intelligence
