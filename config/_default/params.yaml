@@ -5,7 +5,6 @@
 
 # Appearance
 appearance:
-  day_night: false
   mode: light
   color: zinc
   font: Minimal
@@ -37,13 +36,12 @@ header:
     blox: "navbar"
     fixed_to_top: true
     show_search: true
-    show_theme_chooser: true
+    show_theme_chooser: false
     logo:
       text: "Guilherme Azevedo"
 
 # Site footer
 footer:
-  height: 10px
   copyright:
     notice: '© {year} Guilherme Azevedo. This work is licensed under {license}'
     license:
@@ -53,9 +51,9 @@ footer:
       allow_commercial: false
 
 # Localization
-#locale:
-#  date_format: 'Jan 2, 2006'
-#  time_format: '3:04 PM'
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
 
 # Site features
 features:
