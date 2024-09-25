@@ -186,3 +186,4 @@ interests:
 ## Hi there!!  
 
 I am a Brazilian evolutionary biologist based in Ithaca, NY - USA. I am curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life and to reveal the role of the environment in driving species through their path. To achieve that, my research integrates over models and data from different disciplines and across scales. I use invaluable information from museum collections as well as data from field work to understand the micro and macro-evolutionary processes that shaped diversity and distribution of organisms from a perspective that integrates population genomics, phylogenetics, ecology and biogeography.
+
