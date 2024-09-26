@@ -1,8 +1,8 @@
 ---
 title: Phenotypic evolution through the lens of population genetics processes 
 summary: 
-#date: 2023-10-24
-type: landing
+date: false
+type: doc
 math: false
 tags:
   - populaion gnomics, coalescence, trait evolution, dionycha spiders
