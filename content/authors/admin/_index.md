@@ -1,6 +1,6 @@
 ---
 # Display name
-title: <p style="color:#000000 "> Guilherme Azevedo </p>
+title: Guilherme Azevedo
 
 # Full name (for SEO)
 first_name: Guilherme
@@ -20,11 +20,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: <p style="color:#000000 "> Postdoctoral Associate <p style="color:#000000 ">
+role:  Postdoctoral Associate
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: <p style="color:#000000 ">San Diego State University<p style="color:#000000 ">
+  - name: San Diego State University
     url: https://biology.sdsu.edu/
 
 # Social network links
