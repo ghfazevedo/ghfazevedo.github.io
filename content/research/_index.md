@@ -19,8 +19,9 @@ sections:
         folders:
           - research
     design:
-      view: article-grid
-      columns: 2
+      view: showcase
+      fill_image: true
+      columns: 1
       background:
         color: white
         image:
