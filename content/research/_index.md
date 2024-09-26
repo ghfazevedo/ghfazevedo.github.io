@@ -10,7 +10,7 @@ cascade:
       show_breadcrumb: true
 
 sections:
-  - block: markdown
+  - block: collection
     id: research
     content:
       title: Research Areas
@@ -19,7 +19,7 @@ sections:
         folders:
           - research
     design:
-      view: showcase
+      view: compact
       columns: 2
       #css_class: bright
       background:
