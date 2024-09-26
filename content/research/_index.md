@@ -19,7 +19,7 @@ sections:
         folders:
           - research
     design:
-      view: article-grid
+      view: showcase
       columns: 2
       #css_class: bright
       background:
