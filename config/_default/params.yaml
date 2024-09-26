@@ -5,7 +5,7 @@
 
 # Appearance
 appearance:
-  mode: dark
+  mode: light
   color: zinc
   font: Minimal
   font_size: XL
