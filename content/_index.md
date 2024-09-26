@@ -21,7 +21,7 @@ sections:
     design:
       css_class: bright
       background:
-        #color: white
+        color: white
         # Text color (true=light, false=dark, or remove for the dynamic theme color).
         #text_color_light: false
         image:
