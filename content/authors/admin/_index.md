@@ -1,8 +1,6 @@
 ---
 # Display name
-title: Guilherme Azevedo
-  design:
-    text_color_light: false
+title: <p style="color:#000000 "> Guilherme Azevedo </p>
 
 # Full name (for SEO)
 first_name: Guilherme
@@ -22,11 +20,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoctoral Associate
+role: <p style="color:#000000 "> Postdoctoral Associate <p style="color:#000000 ">
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: San Diego State University
+  - name: <p style="color:#000000 ">San Diego State University<p style="color:#000000 ">
     url: https://biology.sdsu.edu/
 
 # Social network links
@@ -189,16 +187,14 @@ profiles:
 #      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is #a reat day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-## Hi there!!  
+## <p style="color:#000000 "> Hi there!!  </p>
 
-<p style="color:#000000 ">I am a Brazilian biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse (over 52,000 species in many shapes, colors and habits), serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. It is important to pass along our discoveries to the general public creating a sene of awareness and admiration for nature. Only then we will be able to effectively conserve biodiversity for future generations. At last, I believe that the importance of biodiversity to the success of an ecosystem is analogous to the importance of cultural and ethnic diversity for humanity to thrive as a society. In this website you can learn a little bit more about me, my research, teaching and outreach.  
-Please reach out if you have any question, suggestion, or if you are interested in collaboration! 
+<p style="color:#000000 ">I am a Brazilian biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse (over 52,000 species in many shapes, colors and habits), serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. It is important to pass along our discoveries to the general public creating a sene of awareness and admiration for nature. Only then we will be able to effectively conserve biodiversity for future generations. At last, I believe that the importance of biodiversity to the success of an ecosystem is analogous to the importance of cultural and ethnic diversity for humanity to thrive as a society. In this website you can learn a little bit more about me, my research, teaching and outreach.  </p>
+<p style="color:#000000 "> Please reach out if you have any question, suggestion, or if you are interested in collaboration! </p>
 
-Cheers!
+<p style="color:#000000 "> Cheers! </p>
 
-### *Gui*
-
-
+### <p style="color:#000000 "> *Gui* </p>
 
 
 
@@ -220,7 +216,9 @@ Cheers!
 
 
 
-</p>
+
+
+
 
 
 
