@@ -1,13 +1,14 @@
 ---
 # Display name
 title: Guilherme Azevedo
+text_color_light: false
 
 # Full name (for SEO)
 first_name: Guilherme
 last_name: Azevedo
 
 # Name pronunciation (optional)
-name_pronunciation: ɡiˈʎɛɦ.mi
+#name_pronunciation: ɡiˈʎɛɦ.mi
 
 # Status emoji
 #status:
