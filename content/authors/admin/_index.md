@@ -1,6 +1,6 @@
 ---
 # Display name
-title: <span style="color:#000000 "> Guilherme Azevedo </span>
+title: Guilherme Azevedo
 
 # Full name (for SEO)
 first_name: Guilherme
