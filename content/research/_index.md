@@ -21,7 +21,7 @@ sections:
     design:
       view: article-grid
       columns: 2
-      css_class: bright
+      #css_class: bright
       background:
         color: white
         image:
