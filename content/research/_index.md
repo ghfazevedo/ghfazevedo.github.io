@@ -10,7 +10,7 @@ cascade:
       show_breadcrumb: true
 
 sections:
-  - block: collection
+  - block: markdown
     id: research
     content:
       title: Research Areas
