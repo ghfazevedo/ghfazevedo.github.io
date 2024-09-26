@@ -1,7 +1,8 @@
 ---
 # Display name
 title: Guilherme Azevedo
-text_color_light: false
+  design:
+    text_color_light: false
 
 # Full name (for SEO)
 first_name: Guilherme
