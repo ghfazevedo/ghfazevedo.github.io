@@ -3,6 +3,7 @@ title: Phenotypic evolution through the lens of population genetics processes
 type: markdown
 design:
   background:
+    css_class: bright
     # Text color (true=light, false=dark, or remove for the dynamic theme color).
     text_color_light: false
     #color: white
