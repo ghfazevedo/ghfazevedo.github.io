@@ -19,12 +19,12 @@ main:
   - name: Teaching
     url: teaching/
     weight: 14
-  - name: Outreach
-    url: 
-    weight: 20
-  - name: Field
-    url: 
-    weight: 30
+#  - name: Outreach
+#    url: 
+#    weight: 20
+#  - name: Field
+#    url: 
+#    weight: 30
   - name: Codes
     url: codes/
     weight: 40
