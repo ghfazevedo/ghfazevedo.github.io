@@ -13,13 +13,12 @@ design:
       size: cover
       position: center
       parallax: false
-  columns: '2'
 
 sections:
   - block: hero
     content:
       title: "Publications"
-      text: <p style="color:#000000 ">You can escrow down below, check my on my Google Scholar profile, or you can download my CV to find a updated list of publications. Don't hesitate to contact me if you find some pay wall on your way. </p>
+      text: <p style="color:#000000 ">You can scroll down below, check my on my Google Scholar profile, or you can download my CV to find a updated list of publications. Don't hesitate to contact me if you find some pay wall on your way. </p>
       primary_action:
         text: Google Scholar
         url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
@@ -59,4 +58,7 @@ sections:
     
     design:
       columns: '1'
+
+  design:
+    columns: '2'
 ---
