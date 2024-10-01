@@ -5,7 +5,7 @@
 
 main:
   - name: About me
-    url: /
+    url: about_me/
     weight: 10
   - name: Research
     url: research/
