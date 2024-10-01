@@ -25,5 +25,5 @@ sections:
         icon: academicons/google-scholar
       secondary_action:
         text: Download my CV
-        url: ../../static/uploads/GHFA_CV_Sept_2024.pdf
+        url: /uploads/GHFA_CV_Sept_2024.pdf
 ---
