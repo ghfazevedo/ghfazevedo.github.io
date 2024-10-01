@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Use of Genomic Data in Phylogenetic Systematics
-summary: A tutorial for processing genomic/transcriptomic data for phylogentics used in the UFMG grad course
+summary: A tutorial used in the UFMG grad course
 date: 2021-10-1
 type: docs
 math: false
@@ -25,13 +25,13 @@ design:
       parallax: false
 ---
 
-# Objetivos
+## Objetivos
 
 Quando lidamos com dados genômicos, temos que manipular e organizar muitos arquivos de *input* e *output*, o que parece muito complicado. Porém, quando sabemos utilizar linha de comando, essas tarefas tornam-se mais simples.
 O objetivo deste tutorial (e da aula como um todo) é dar uma visão geral sobre como comunicar com seu computador através da linha de comando para executar tarefas que seriam muito complicadas de executar com cliques do mouse. Esperamos que no final da disciplina você tenha uma base para trabalhar com dados de sequenciamento massivo, e para desenvolver melhor suas habilidades em bioinformática, caso tenha interesse no futuro. Lembre-se que o google tem muitas respostas para suas perguntas sobre programação. Só é necessário saber perguntar.
 
 
-# O que é a *Shell*
+## O que é a *Shell*
 
 
 *Shell* é um programa que permite você se comunicar com o sistema operacional do seu computador através de comandos usando o teclado, sem a necessidade de uma interface gráfica (*Graphical User Interface*, GUI) que você opera com o mouse.  
@@ -48,7 +48,7 @@ Siga as [instruções](https://www.windowscentral.com/install-windows-subsystem-
 
   
 
-# Utilizando a *Shell* 
+## Utilizando a *Shell* 
 
 
 Abra o WSL (ou o aplicativo chamado Terminal no MAC/Linux).
@@ -314,7 +314,7 @@ history > terminal_history_2021_.txt
 Agora que você já tem uma noção de alguns comandos básicos, vamos instalar programas. Ao longo dos tutorias vamos introduzir novos comandos úteis. Você também pode dar uma olhada com calma em outros sites como o [Data Carpentry](https://datacarpentry.org/shell-genomics/06-organization/index.html) ou [SoftwareCarpentry]( https://swcarpentry.github.io/shell-novice/03-create/index.html) que contém alguns tutoriais e exercícios. 
   
   
-# Instalando programas
+## Instalando programas
 
 Muitos programas hoje em dia apresentam bons manuais *online* que ensinam o passo a passo de como instalar programas. Aqui, vamos ensinar algumas dicas, mas é sempre importante ler em detalhe a página do programa antes de instalá-lo.
 
@@ -463,7 +463,7 @@ Um outro programa muito usado para instalar pacotes em Python é o [Pip](https:/
 
 Ao longo da disciplina instalaremos mais programas. Caso tenha tempo, você pode navegar pelos tutoriais e instalar os programas antecipadamente.
 
-# Acessando pastas do Windows com WSL
+## Acessando pastas do Windows com WSL
 
 Embora estejamos utilizando o Linux, podemos querer acessar documentos que estão em pastas do Windows. Os arquivos do Windows ficam “escondidos” na raiz do WSL. Não utilize o WSL para manipular arquivos de sistema do Windows, use apenas para arquivos comuns do seu projeto.
  
@@ -555,7 +555,7 @@ Sempre que quisermos acessar essa pasta do terminal WSL podemos usar:
 
 ```bash
 cd ~/filogenomica 
-````
+```
 
 Ou podemos acessar ela pelo Windows normalmente
 
@@ -574,7 +574,7 @@ Adicione os comandos que você aprendeu hoje. Ao longo da disciplina você pode 
 No Windows, você pode abrir o arquivo usando um editor de texto (sugiro o [notepad++](https://notepad-plus-plus.org/downloads/)) ou até mesmo o Excel ou outro editor de planilhas.
   
   
-# Obtendo Sequências – *Sequence Read Archive*
+## Obtendo Sequências – *Sequence Read Archive*
 
 [*Sequence Read Archive* (SRA)](https://www.ncbi.nlm.nih.gov/sra) é um repositório do GenBank para sequencias cruas resultantes de sequenciamento massivo (*high throughput sequencing*) de bibliotecas genômicas. Você pode navegar pelo site do SRA para buscar sequencias dos organismos que você tem interesse a baixar pelo site. Porém, uma vez que temos o número de acesso, é mais fácil utilizar uma ferramenta chamada [SRA Toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software). Podemos instalar usando ‘wget’ para baixar o arquivo, como mostrado nas [instruções](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit) do GitHub do programa, ou podemos usar o apt-get ou o conda. A versão no repositório do conda não é a mais recente:
 
@@ -601,7 +601,7 @@ conda create -n nome_do_ambiente sra-tools
 
 O SRA Toolkit possui uma ferramenta chamada ‘fastq-dump’. É ela que usaremos para baixar as sequencias. As sequências que utilizaremos são de aranhas saltadoras publicadas por [Leduc-Robert and Maddison, 2018](https://doi.org/10.1186/s12862-018-1137-x). Para baixar, precisamos do número de acesso da corrida que pode ser encontrado na página (Figura 1).  
 
-![Número de acesso à corrida do SRA](/home/ghfa/GHFA/Classes/Filogenomica_UFMG/Images/SRAweb.JPG)  
+![Número de acesso à corrida do SRA](/images/SRAweb.JPG)  
   
   
 Acesse a pasta “data” que você criou no tutorial passado e crie uma outra pasta para os dados de RNA-seq.  
