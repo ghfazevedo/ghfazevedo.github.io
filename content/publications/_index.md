@@ -13,6 +13,8 @@ design:
       size: cover
       position: center
       parallax: false
+  # Default section spacing
+  spacing: "4rem"
 
 sections:
   - block: hero
