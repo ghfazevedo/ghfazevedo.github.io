@@ -8,7 +8,6 @@ math: false
 #  - Bioinformatic
 image:
   caption: ''
-text: "Here you will find tutorials and other materials I produced for classes"
 design:
   #css_class: bright
   background:

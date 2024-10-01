@@ -29,6 +29,7 @@ sections:
     id: teaching
     content:
       title: Teaching
+      text: "Here you will find tutorials and other materials I produced for classes"
       filters:
         folders:
           - teaching
