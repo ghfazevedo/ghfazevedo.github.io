@@ -32,7 +32,7 @@ sections:
       title: 'Peer reviewed'
       subtitle: ''
       text: |-
-        **Azevedo, G.H.F.**, Maddison, W. and Hedin, M. 2024. Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae). Molecular Phylogenetics and Evolution, 197, p. 108109. (https://doi.org/10.1016/j.ympev.2024.108109)  
+        <p style="color:#000000 ">**Azevedo, G.H.F.**, Maddison, W. and Hedin, M. 2024. Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae). Molecular Phylogenetics and Evolution, 197, p. 108109. [link](https://doi.org/10.1016/j.ympev.2024.108109)</p>  
         
         **Azevedo, G.H.F.**, Blair, J. and Hedin, M. 2023. Evaluating possible anthropogenic impacts on gene flow and loss of genetic diversity in endangered Madla Cave Meshweaver spiders (Hahniidae, Cicurina madla). Conservation Genetics, 25, p. 149–164. (https://doi.org/10.1007/s10592-023-01561-y)  
         
