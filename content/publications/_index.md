@@ -2,6 +2,18 @@
 title: Publications
 type: landing
 
+design:
+  background:
+    color: white
+    image:
+      # Add your image background to `assets/media/`.
+      filename: oldmanuscript.png
+      filters:
+        brightness: 1.0
+      size: cover
+      position: center
+      parallax: false
+
 sections:
   - block: hero
     content:
@@ -13,5 +25,5 @@ sections:
         icon: academicons/google-scholar
       secondary_action:
         text: Download my CV
-        url: ./GHFA_CV_Sept_2024.pdf
+        url: GHFA_CV_Sept_2024.pdf
 ---
