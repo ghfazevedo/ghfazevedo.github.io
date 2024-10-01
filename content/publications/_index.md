@@ -13,6 +13,7 @@ design:
       size: cover
       position: center
       parallax: false
+  columns: '2'
 
 sections:
   - block: hero
