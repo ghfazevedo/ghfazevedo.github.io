@@ -18,7 +18,7 @@ sections:
   - block: hero
     content:
       title: "Publications"
-      text: <p style="color:#000000 ">You can find a updated list of publications on my Google Scholar profile, or you can download my CV. Don't hesitate to contact me if you find some pay wall on your way. </p>
+      text: <p style="color:#000000 ">You can escrow down below, check my on my Google Scholar profile, or you can download my CV to find a updated list of publications. Don't hesitate to contact me if you find some pay wall on your way. </p>
       primary_action:
         text: Google Scholar
         url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
@@ -32,7 +32,7 @@ sections:
       title: 'Peer reviewed'
       subtitle: ''
       text: |-
-        <p style="color:#000000 "> <b>Azevedo, G.H.F.</b>, Maddison, W. and Hedin, M. 2024. Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae). Molecular Phylogenetics and Evolution, 197, p. 108109. <a href="https://doi.org/10.1016/j.ympev.2024.108109">Link</a> </p>  
+        <p style="color:#000000 "> <b>Azevedo, G.H.F.</b>, Maddison, W. and Hedin, M. 2024. Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae). Molecular Phylogenetics and Evolution, 197, p. 108109. <a href="https://doi.org/10.1016/j.ympev.2024.108109"> <i>Link </i></a> </p>  
         
         **Azevedo, G.H.F.**, Blair, J. and Hedin, M. 2023. Evaluating possible anthropogenic impacts on gene flow and loss of genetic diversity in endangered Madla Cave Meshweaver spiders (Hahniidae, Cicurina madla). Conservation Genetics, 25, p. 149–164. (https://doi.org/10.1007/s10592-023-01561-y)  
         
