@@ -18,7 +18,7 @@ sections:
   - block: hero
     content:
       title: "Publications"
-      text: <p style="color:#000000 ">You can find a updated list of publications on my Google Scholar profile, or you can download my CV </p>
+      text: <p style="color:#000000 ">You can find a updated list of publications on my Google Scholar profile, or you can download my CV. Don't hesitate to contact me if you find some pay wall on your way. </p>
       primary_action:
         text: Google Scholar
         url: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
@@ -26,6 +26,8 @@ sections:
       secondary_action:
         text: Download my CV
         url: /uploads/GHFA_CV_Sept_2024.pdf
+  
+  - block: markdown
 ---
 
 ### PEER-REVIEWED PUBLICATIONS 
