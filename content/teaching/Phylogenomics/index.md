@@ -1278,7 +1278,7 @@ Os genes nessas pastas estão prontos para alinhamento. Note que temos matrizes 
   
 Obs: Existe um script em python disponibilizado por Jamie McGowan - 2020 neste [link](https://github.com/jamiemcg/BUSCO_phylogenomics) para transformar o output do BUSCO para filogenômica. 
 
-### Alinhamento 
+## Alinhamento 
 
 Para alinhar podemos usar o mafft em *loop* nos arquivos das pastas obtidas anteriormente. 
 Para alinhar os genes resultantes do OrthoFinder, execute o loop abaixo na pasta de output do programa 
