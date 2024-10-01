@@ -2,7 +2,7 @@
 title: Current research
 summary: ""
 date: 2023-10-24
-type: partials
+#type: partials
 math: false
 
 #sections:
