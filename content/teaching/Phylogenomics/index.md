@@ -10,16 +10,6 @@ image:
   caption: ''
 ---
 
----
-title: "Introdução à Linha de Comandos"
-author: "Guilherme Azevedo"
-date: "30/11/2021"
-output: pdf_document
-header-includes:
- - \usepackage{fvextra}
- - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}} 
----
-
 # Objetivos
 
 Quando lidamos com dados genômicos, temos que manipular e organizar muitos arquivos de *input* e *output*, o que parece muito complicado. Porém, quando sabemos utilizar linha de comando, essas tarefas tornam-se mais simples.
