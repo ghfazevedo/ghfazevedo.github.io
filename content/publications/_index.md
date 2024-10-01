@@ -52,8 +52,10 @@ sections:
 
         [**Azevedo, G.H.F.**; Griswold, C.E.; Santos, A.J. 2017. Systematics and evolution of ground spiders revisited (Araneae, Dionycha, Gnaphosidae). Cladistics, p. 1-48, 2017.](https://doi.org/10.1111/cla.12226)
 
-        [**Azevedo, G.H.F.**, Ott, R.; Griswold, C.E.; Santos, A.J. 2016. A taxonomic revision of the ground spiders of the genus Apopyllus (Araneae:Gnaphosidae). Zootaxa (Auckland. Print), v. 4178, p. 301.](http://dx.doi.org/10.11646/zootaxa.4178.3.1)  
+        [**Azevedo, G.H.F.**, Ott, R.; Griswold, C.E.; Santos, A.J. 2016. A taxonomic revision of the ground spiders of the genus Apopyllus (Araneae:Gnaphosidae). Zootaxa (Auckland. Print), v. 4178, p. 301.](http://dx.doi.org/10.11646/zootaxa.4178.3.1)
 
         [**Azevedo, G.H.F.**, Faleiro, B.T., Magalhães, I.L.F., Benedetti, A.R., Oliveira, U., Pena-Barbosa, J.P.P., Santos, M.T.T., Vilela, P.F., De Maria, M., Santos, A.J. 2014. Effectiveness of sampling methods and further sampling for accessing spider diversity: a case study in a Brazilian Atlantic rainforest fragment. Insect Conservation and Diversity, v. 7, p. 381-391.](https://doi.org/10.1111/icad.12061)
 
+    design:
+      columns: '1'
 ---
