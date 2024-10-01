@@ -45,7 +45,7 @@ profiles:
     label: See my publications on Google Scholar profile
   #- icon: academicons/orcid
   #  url: https://orcid.org/
-  - icon: /assets/media/icons/bluesky-brands-solid.svg
+  - icon: /icons/bluesky-brands-solid.svg
     url: https://bsky.app/profile/ghfazevedo.bsky.social
     label: This is my BlueSky, if you are tired of Twitter
   - icon: brands/x
