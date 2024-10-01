@@ -47,5 +47,5 @@ design:
 
  <p style="color:#000000 "> Understanding the effects that humans impose on the genetic diversity of other species is crucial for conservation. Nevertheless, the interaction between human development and arthropod species, especially spiders, is massively underexplored. In recent research, I used genomic data combined with land use information to evaluate the anthropogenic impact on an endangered cave spider. I found reduced genetic diversity and gene flow in highly urbanized regions when compared to protected areas, and the decline in spider population sizes coincides with increase in human occupation. </p>
 
- ![image](./urban.jpg)
+ ![image](./urban.png)
  <p style="color:#000000 ">  LAnd use and gene flow in a endangered spider species.</p>
