@@ -12,13 +12,13 @@ main:
     weight: 11
   - name: Research
     url: research/
-    weight: 11
+    weight: 12
   - name: Publications
     url: publications/
-    weight: 12
+    weight: 13
   - name: Teaching
     url: /#news
-    weight: 13
+    weight: 14
   - name: Outreach
     url: 
     weight: 20
@@ -30,4 +30,4 @@ main:
     weight: 40
   - name: News
     url: /#news
-    weight: 40
+    weight: 50

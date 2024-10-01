@@ -13,8 +13,6 @@ design:
       size: cover
       position: center
       parallax: false
-  # Default section spacing
-  spacing: "6rem"
 
 sections:
   - block: hero
@@ -58,7 +56,4 @@ sections:
 
         [**Azevedo, G.H.F.**, Faleiro, B.T., Magalhães, I.L.F., Benedetti, A.R., Oliveira, U., Pena-Barbosa, J.P.P., Santos, M.T.T., Vilela, P.F., De Maria, M., Santos, A.J. 2014. Effectiveness of sampling methods and further sampling for accessing spider diversity: a case study in a Brazilian Atlantic rainforest fragment. Insect Conservation and Diversity, v. 7, p. 381-391.](https://doi.org/10.1111/icad.12061)
 
-
-    design:
-      columns: '1'
 ---
