@@ -2,9 +2,15 @@
 title: Current research
 summary: ""
 date: 2023-10-24
-type: landing
+type: partials
 math: false
 
+#sections:
+#  - block: markdown
+#    content:
+#      title: My title
+#      subtitle: My subtitle
+#      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
 design:
   background:
     color: white
