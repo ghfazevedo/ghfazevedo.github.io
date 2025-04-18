@@ -5,8 +5,11 @@
 
 # Appearance
 appearance:
-  mode: system
-  color: emerald
+  mode: light
+  color: zinc
+  font: Minimal
+  font_size: XL
+
 
 # SEO
 marketing:
@@ -30,19 +33,23 @@ marketing:
 header:
   navbar:
     enable: true
+    # Align menu links: left (l), center (c), or right (r)
+    align: r
     blox: "navbar"
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
+    show_logo: true
     logo:
-      text: "Your Name"
+      text: "Guilherme Azevedo"
+
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Guilherme Azevedo. This work is licensed under {license}'
     license:
-      enable: true
+      enable: True
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
