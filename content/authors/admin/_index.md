@@ -20,12 +20,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role:  Postdoctoral Associate
+role:  Vissiting Researcher
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: San Diego State University
-    url: https://biology.sdsu.edu/
+  - name: Moreau Lab, Cornell University
+    url: https://www.moreaulab.entomology.cornell.edu/team/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
