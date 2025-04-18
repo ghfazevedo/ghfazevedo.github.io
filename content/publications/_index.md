@@ -27,9 +27,9 @@ sections:
       secondary_action:
         text: Download my CV
         url: /uploads/GHFA_CV_Jan_2025.pdf
-      secondary_action:
-        text: Download my Resume
-        url: /uploads/GHFA_Resume_Jan_2025.pdf
+      #secondary_action:
+      # text: Download my Resume
+      # url: /uploads/GHFA_Resume_Jan_2025.pdf
   
   - block: markdown
     content:
