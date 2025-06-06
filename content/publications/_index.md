@@ -26,7 +26,7 @@ sections:
         icon: academicons/google-scholar
       secondary_action:
         text: Download my CV
-        url: /uploads/GHFA_CV_Jan_2025.pdf
+        url: /uploads/GHFA_CV_Feb_2025.pdf
       #secondary_action:
       # text: Download my Resume
       # url: /uploads/GHFA_Resume_Jan_2025.pdf
