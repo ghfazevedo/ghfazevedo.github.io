@@ -31,7 +31,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:gfernandesdeazeved@sdsu.edu'
+    url: 'mailto:ghfazevedo@gmail.com'
     label: E-mail me
   #- icon: brands/instagram
   #  url: https://www.instagram.com/
