@@ -1,0 +1,7 @@
+{{- /* Paper thumbnail. Context: dict "img" (file name in assets/media/pubs/) "class" */ -}}
+{{- $r := "" }}{{ with .img }}{{ $r = resources.Get (printf "media/pubs/%s" .) }}{{ end -}}
+{{- if $r -}}
+<div class="thumb {{ .class }}"><img src="{{ ($r.Fit "300x220 webp q82").RelPermalink }}" alt="" loading="lazy"></div>
+{{- else -}}
+<div class="thumb empty {{ .class }}"><img src="{{ ((resources.Get "media/icon-ink.png").Resize "160x webp").RelPermalink }}" alt="" loading="lazy"></div>
+{{- end -}}

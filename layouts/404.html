@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="wrap notfound">
+{{ with (resources.Get "media/icon-ink.png").Resize "440x webp" }}<img src="{{ .RelPermalink }}" alt="">{{ end }}
+<h1 style="font-size:40px;margin:24px 0 8px">Page not found</h1>
+<p class="muted">This page may have moved. <a href="{{ "/" | relURL }}">Go to the home page</a>.</p>
+</div>
+{{ end }}

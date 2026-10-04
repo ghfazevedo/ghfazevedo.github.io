@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="wrap">
+<header class="page-head">
+{{ with .Params.label }}<div class="kicker">{{ . }}</div>{{ end }}
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+<article class="article prose">
+{{ if .Params.toc }}<details class="toc" open><summary>Contents</summary>{{ .TableOfContents }}</details>{{ end }}
+{{ .Content }}
+</article>
+</div>
+{{ end }}

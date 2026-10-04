@@ -1,28 +1,13 @@
 ---
 title: Introduction to the Use of Genomic Data in Phylogenetic Systematics
-summary: Tutorial used in the UFMG grad course (Portuguese)
-date: "2021-11-30"
-type: docs
-math: false
-#tags:
-#  - Bioinformatic
-image:
-  caption: ''
-design:
-  #css_class: bright
-  background:
-    color: white
-    # Text color (true=light, false=dark, or remove for the dynamic theme color).
-    #text_color_light: true
-    image:
-      # Add your image background to `assets/media/`.
-      filename: oldmanuscript.png
-      filters:
-        brightness: 1.0
-      size: cover
-      position: center
-      parallax: false
+label: Tutorial · Portuguese · 2021
+summary: Tutorial used in the UFMG graduate course (in Portuguese).
+date: 2021-11-30
+toc: true
+link_text: Open tutorial →
+weight: 10
 ---
+
 
 ## Aula 1
 ### Objetivos

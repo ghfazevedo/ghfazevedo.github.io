@@ -1,36 +1,21 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ""
-date: 2024-09-24
-type: landing
+# HOME PAGE
+# The short "About" text is the body below the second --- line.
+title: Home
+name_lines: [Guilherme, Azevedo]   # how your name breaks in the big title
 
-design:
-  # Default section spacing
-  spacing: "6rem"
+pitch: | # >-
+  Hi there! Welcome to my my website!  
+  I study how evolutionary processes connect across scales, from population genomics to species diversification.
 
-sections:
-  - block: resume-biography-3
-    content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-#      button:
-#        text: Know more about me...
-#        url: /about.md
-    design:
-      #css_class: bright
-      background:
-        color: white
-        # Text color (true=light, false=dark, or remove for the dynamic theme color).
-        #text_color_light: true
-        image:
-          # Add your image background to `assets/media/`.
-          filename: oldmanuscript.png
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
-
+# "Path" list in the About section (most recent first)
+path:
+  - years: 2019–23
+    place: San Diego State University
+  - years: 2017–19
+    place: MACN, Buenos Aires
+  - years: 2012-2016
+    place: PhD, UFMG · California Academy of Sciences
 ---
+
+I am a biologist curious about the evolutionary trajectories that led to the astonishing diversity of life, and about the role of the environment in driving species along their paths. I study spiders and other arachnids, integrating population genomics, phylogenetics, ecology and biogeography, and using both museum collections and fieldwork.

@@ -1,0 +1,63 @@
+{{ define "main" }}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+<div class="about-page">
+{{- /* Photo: a file in this folder named in "photo:", otherwise the home-page portrait */ -}}
+{{- $img := "" -}}
+{{- with .Params.photo }}{{ $img = $.Resources.Get . }}{{ end -}}
+{{- if not $img }}{{ $img = resources.Get "media/avatar.jpg" }}{{ end }}
+<figure class="about-photo">
+<img src="{{ ($img.Resize "720x webp q85").RelPermalink }}" alt="{{ .Params.photo_alt | default (printf "Portrait of %s" site.Params.name) }}">
+{{ with .Params.photo_caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+<div class="prose">{{ .Content }}</div>
+</div>
+
+{{- /* Gallery: photos listed under "gallery:" (file + caption), or,
+       if there is no list, every image inside the gallery/ subfolder */ -}}
+{{- $items := slice -}}
+{{- with .Params.gallery -}}
+  {{- range . -}}
+    {{- $cap := .caption | default "" -}}
+    {{- with $.Resources.Get .file }}{{ $items = $items | append (dict "img" . "caption" $cap) }}{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range .Resources.Match "gallery/*" -}}
+    {{- if eq .ResourceType "image" }}{{ $items = $items | append (dict "img" . "caption" "") }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{ with $items }}
+<section class="gallery-wrap">
+{{ with $.Params.gallery_title }}<h2>{{ . }}</h2>{{ end }}
+<div class="gallery">
+{{ range . }}
+{{- $full := .img.Fit "1800x1800 webp q85" -}}
+<figure>
+<a href="{{ $full.RelPermalink }}" class="gal-link" data-caption="{{ .caption | markdownify | plainify }}">
+<img src="{{ (.img.Fill "600x450 smart webp q80").RelPermalink }}" alt="{{ .caption | markdownify | plainify }}" loading="lazy">
+</a>
+{{ with .caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{ end }}
+</div>
+</section>
+<dialog class="lightbox" aria-label="Photo">
+<button type="button" class="lb-close" aria-label="Close">×</button>
+<img src="" alt=""><p class="lb-cap"></p>
+</dialog>
+<script>
+(function(){
+  var d=document.querySelector('.lightbox'); if(!d||!d.showModal) return;
+  var im=d.querySelector('img'), cap=d.querySelector('.lb-cap');
+  document.querySelectorAll('.gal-link').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();im.src=a.href;im.alt=a.dataset.caption;cap.textContent=a.dataset.caption;d.showModal();});
+  });
+  d.addEventListener('click',function(e){ if(e.target===d||e.target.classList.contains('lb-close')) d.close(); });
+})();
+</script>
+{{ end }}
+</div>
+{{ end }}

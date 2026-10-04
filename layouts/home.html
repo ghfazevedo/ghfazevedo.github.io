@@ -1,0 +1,92 @@
+{{ define "main" }}
+{{- $research := site.GetPage "/research" -}}
+{{- $pubs := hugo.Data.publications -}}
+
+<section class="hero">
+<div class="wrap hero-grid">
+<div class="hero-text">
+<div class="kicker">{{ site.Params.tagline }}</div>
+<div class="hero-name">
+{{ with (resources.Get "media/avatar.jpg").Resize "300x300 webp q85" }}<img src="{{ .RelPermalink }}" alt="Portrait of {{ site.Params.name }}" width="136" height="136">{{ end }}
+<h1>{{ with .Params.name_lines }}{{ delimit . "<br>" | safeHTML }}{{ else }}{{ site.Params.name }}{{ end }}</h1>
+</div>
+<div class="pitch">{{ .Params.pitch | markdownify }}</div>
+<p class="position">{{ site.Params.position }}</p>
+{{ partial "contact-buttons.html" . }}
+</div>
+<div class="emblem">
+{{ with (resources.Get "media/icon.png").Resize "880x webp q90" }}<img src="{{ .RelPermalink }}" alt="Emblem: a circular phylogeny woven into a spider web" width="440" height="440">{{ end }}
+</div>
+</div>
+</section>
+
+{{ with $research }}{{ with .Params.programs }}
+<section class="band section">
+<div class="wrap">
+<div class="section-head"><h2>Research</h2><a class="more" href="{{ $research.RelPermalink }}">All research →</a></div>
+<div class="programs">
+{{ range $i, $p := . }}
+<a class="card c{{ add $i 1 }}" href="{{ $research.RelPermalink }}#program-{{ add $i 1 }}">
+<div class="card-fig">{{ with $research.Resources.Get $p.image }}<img src="{{ (.Fit "700x440 webp q85").RelPermalink }}" alt="" loading="lazy">{{ end }}</div>
+<div class="card-body">
+<div class="card-num">PROGRAM {{ printf "%02d" (add $i 1) }}</div>
+<div class="card-title">{{ $p.title }}</div>
+<div class="card-text">{{ $p.summary | markdownify }}</div>
+</div>
+</a>
+{{ end }}
+</div>
+</div>
+</section>
+{{ end }}{{ end }}
+
+<section class="section">
+<div class="wrap split">
+<div>
+<div class="section-head" style="margin-bottom:26px"><h2>Selected publications</h2><a class="more" href="{{ "/publications/" | relURL }}">All →</a></div>
+<div class="mini-pubs">
+{{ range first 3 (where $pubs "selected" true) }}
+{{- $url := "" }}{{ with .doi }}{{ $url = printf "https://doi.org/%s" . }}{{ else }}{{ with .preprint }}{{ $url = . }}{{ end }}{{ end }}
+<div class="mini-pub">
+{{ partial "thumb.html" (dict "img" .image) }}
+<div>
+<a class="t" href="{{ $url | default "/publications/" }}">{{ .title | markdownify }}</a>
+<div class="meta"><i>{{ .journal }}</i> · {{ .status | default .year }}</div>
+</div>
+</div>
+{{ end }}
+</div>
+</div>
+<div>
+<h2>News</h2>
+<div class="news">
+{{ range first 5 hugo.Data.news }}
+<div><div class="date">{{ .date }}</div><p>{{ .text | markdownify }}</p></div>
+{{ end }}
+</div>
+</div>
+</div>
+</section>
+
+<section class="band section" style="border-bottom:0">
+<div class="wrap about">
+<figure class="bookplate">
+<div>
+{{ with (resources.Get "media/icon-ink.png").Resize "300x webp" }}<img src="{{ .RelPermalink }}" alt="Emblem drawn in ink" loading="lazy">{{ end }}
+<figcaption>Ex libris<br><span>{{ upper site.Params.author_short }}</span></figcaption>
+</div>
+</figure>
+<div>
+<h2>About</h2>
+<div class="bio">{{ .Content }}</div>
+<a class="more" href="{{ "/about_me/" | relURL }}">More about me →</a>
+</div>
+<div>
+<div class="kicker" style="font-size:12px;padding-top:10px">Path</div>
+<div class="path">
+{{ range .Params.path }}<div class="y">{{ .years }}</div><div>{{ .place }}</div>{{ end }}
+</div>
+</div>
+</div>
+</section>
+{{ end }}

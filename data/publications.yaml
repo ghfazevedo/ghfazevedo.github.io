@@ -1,0 +1,126 @@
+# ─────────────────────────────────────────────────────────────
+#  PUBLICATIONS — one block per paper (order does not matter;
+#  the site sorts by year, newest first).
+#
+#  title:     paper title (use *italics* for species names)
+#  authors:   as in your CV — your name is put in bold automatically
+#  year:      number
+#  journal:   journal name
+#  volume:    volume(issue): pages   (optional)
+#  status:    "in review" etc. Leave out for published papers.
+#  doi:       only the DOI, without https://doi.org/
+#  preprint / pdf / code / data:   links (optional)
+#  image:     a small figure from the paper, saved in assets/media/pubs/  (optional)
+#  selected:  true → shown on the home page (the first 3 are used)
+# ─────────────────────────────────────────────────────────────
+
+- title: "Trait-dependent protracted speciation illuminates the penumbra between micro- and macroevolution: insights from cave spider diversification"
+  authors: "Azevedo, G.H.F. and Hedin, M."
+  year: 2026
+  journal: Systematic Biology
+  status: in review
+  preprint: #https://drive.google.com/file/d/1_VGtjYhZAkEJrYH6zTtTtH8YasK1SNu8/view
+  image: traderpros.jpg
+
+- title: "A combined phylogenomic and morphological analysis of the ghost spider subfamily Amaurobioidinae (Araneae: Anyphaenidae)"
+  authors: "Ramírez, M.J.*, Azevedo, G.H.F.*, Wilson, J.D., Martínez, L.A., Soto, E.M. and Hedin, M."
+  year: 2026
+  journal: Systematic Entomology
+  status: in review
+  preprint: #https://drive.google.com/file/d/1Qc1Iwwsh2eoK7-lnIl6nZ0_Rb7bQszaK/view?usp=drive_link
+
+- title: "Testing cohesive selective paths and evaluating loss of evolutionary information while delimiting species of Brazilian wandering spiders"
+  authors: "Azevedo, G.H.F., Oliveira, U., Santos, F., Brescovit, A. and Santos, A.J."
+  year: 2026
+  journal: Evolution
+  volume: "80: 1243–1263"
+  doi: 10.1093/evolut/qpag049
+  selected: true
+
+- title: "Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae)"
+  authors: "Azevedo, G.H.F., Maddison, W. and Hedin, M."
+  year: 2024
+  journal: Molecular Phylogenetics and Evolution
+  volume: "197: 108109"
+  doi: 10.1016/j.ympev.2024.108109
+  selected: true
+
+- title: "Evaluating possible anthropogenic impacts on gene flow and loss of genetic diversity in endangered Madla Cave Meshweaver spiders (Hahniidae, *Cicurina madla*)"
+  authors: "Azevedo, G.H.F., Blair, J. and Hedin, M."
+  year: 2023
+  journal: Conservation Genetics
+  volume: "25: 149–164"
+  doi: 10.1007/s10592-023-01561-y
+  image: cicurina-madla.png
+
+- title: "Convergence, hemiplasy, and correlated evolution impact morphological diversity related to a web-less lifestyle in the two-clawed spiders"
+  authors: "Azevedo, G.H.F., Bougie, T., Carboni, M., Hedin, M. and Ramírez, M.J."
+  year: 2022
+  journal: Insect Systematics and Diversity
+  volume: "6(5): 1–14"
+  doi: 10.1093/isd/ixac020
+  image: hemiplasy.jpg
+  selected: true
+
+- title: "Combining genomic, phenotypic and Sanger sequencing data to elucidate the phylogeny of the two-clawed spiders (Dionycha)"
+  authors: "Azevedo, G.H.F., Bougie, T., Carboni, M., Hedin, M. and Ramírez, M.J."
+  year: 2022
+  journal: Molecular Phylogenetics and Evolution
+  volume: "166: 107327"
+  doi: 10.1016/j.ympev.2021.107327
+
+- title: "Fossils constrain biogeographical history in a clade of flattened spiders with transcontinental distribution"
+  authors: "Azevedo, G.H.F., Parreiras, J.S., Bougie, T., Michalik, P., Wunderlich, J. and Ramírez, M.J."
+  year: 2021
+  journal: Journal of Biogeography
+  volume: "48: 3032–3046"
+  doi: 10.1111/jbi.14259
+
+- title: "Twenty years, eight legs, one concept: describing spider biodiversity in *Zootaxa* (Arachnida: Araneae)"
+  authors: "Jäger, P., Arnedo, M.A., Azevedo, G.H.F., Baehr, B., Bonaldo, A.B., Haddad, C.R., Harms, D., Hormiga, G., Labarque, F.M., Muster, C. and Ramírez, M.J."
+  year: 2021
+  journal: Zootaxa
+  volume: "4979(1): 131–146"
+  doi: 10.11646/zootaxa.4979.1.14
+
+- title: "Phylogenomics of peacock spiders and their kin (Salticidae: *Maratus*), with implications for the evolution of male courtship displays"
+  authors: "Girard, M.B., Elias, D.O., Azevedo, G., Bi, K., Kasumovic, M.M., Waldock, J.M., Rosenblum, E.B. and Hedin, M."
+  year: 2021
+  journal: Biological Journal of the Linnean Society
+  volume: "132(3): 471–494"
+  doi: 10.1093/biolinnean/blaa165
+
+- title: "The fossil record of spiders revisited: implications for calibrating trees and evidence for a major faunal turnover since the Mesozoic"
+  authors: "Magalhaes, I.L., Azevedo, G.H.F., Michalik, P. and Ramírez, M.J."
+  year: 2020
+  journal: Biological Reviews
+  volume: "95(1): 184–217"
+  doi: 10.1111/brv.12559
+
+- title: "To complicate or to simplify? Phylogenetic tests of complexity trends and genital evolution in ground spiders (Araneae: Dionycha: Gnaphosidae)"
+  authors: "Azevedo, G.H.F., Griswold, C.E. and Santos, A.J."
+  year: 2018
+  journal: Zoological Journal of the Linnean Society
+  volume: "184(3): 673–694"
+  doi: 10.1093/zoolinnean/zly016
+
+- title: "Systematics and evolution of ground spiders revisited (Araneae, Dionycha, Gnaphosidae)"
+  authors: "Azevedo, G.H.F., Griswold, C.E. and Santos, A.J."
+  year: 2017
+  journal: Cladistics
+  volume: "1–48"
+  doi: 10.1111/cla.12226
+
+- title: "A taxonomic revision of the ground spiders of the genus *Apopyllus* (Araneae: Gnaphosidae)"
+  authors: "Azevedo, G.H.F., Ott, R., Griswold, C.E. and Santos, A.J."
+  year: 2016
+  journal: Zootaxa
+  volume: "4178: 301"
+  doi: 10.11646/zootaxa.4178.3.1
+
+- title: "Effectiveness of sampling methods and further sampling for accessing spider diversity: a case study in a Brazilian Atlantic rainforest fragment"
+  authors: "Azevedo, G.H.F., Faleiro, B.T., Magalhães, I.L.F., Benedetti, A.R., Oliveira, U., Pena-Barbosa, J.P.P., Santos, M.T.T., Vilela, P.F., De Maria, M. and Santos, A.J."
+  year: 2014
+  journal: Insect Conservation and Diversity
+  volume: "7: 381–391"
+  doi: 10.1111/icad.12061
