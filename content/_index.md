@@ -5,7 +5,7 @@ title: Home
 name_lines: [Guilherme, Azevedo]   # how your name breaks in the big title
 
 pitch: | # >-
-  Hi there! Welcome to my my website!  
+  Hi there! Welcome to my website!  
   I study how evolutionary processes connect across scales, from population genomics to species diversification.
 
 # "Path" list in the About section (most recent first)
