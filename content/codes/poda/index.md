@@ -1,23 +1,8 @@
 ---
 title: Poda
-date: 2024-10-01
+label: Tool · 2024
+summary: Tools to trim alignments and prune trees.
 external_link: https://github.com/ghfazevedo/Poda
-design:
-  background:
-    color: white
-    image:
-      # Add your image background to `assets/media/`.
-      filename: oldmanuscript.png
-      filters:
-        brightness: 1.0
-      size: cover
-      position: center
-      parallax: false
-
+link_text: GitHub ↗
+weight: 30
 ---
-
-Tools to trim alignments and prune trees.
-
-
-
-<!--more-->

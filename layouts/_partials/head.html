@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $title := cond .IsHome site.Params.name (printf "%s · %s" .Title site.Params.name) }}
+<title>{{ $title }}</title>
+{{- $desc := .Description | default .Params.summary | default site.Params.description }}
+<meta name="description" content="{{ $desc | plainify }}">
+<meta name="author" content="{{ site.Params.name }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- $icon := resources.Get "media/icon.png" }}
+{{- with $icon.Resize "64x64 png" }}<link rel="icon" type="image/png" href="{{ .RelPermalink }}">{{ end }}
+{{- with $icon.Resize "180x180 png" }}<link rel="apple-touch-icon" href="{{ .RelPermalink }}">{{ end }}
+{{- /* Link-preview card (email, Slack, social media) */}}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc | plainify }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with $icon.Resize "600x600 png" }}<meta property="og:image" content="{{ .Permalink }}">{{ end }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+{{- $css := resources.Get "css/main.css" }}
+{{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- with (resources.Get "media/oldmanuscript.png").Resize "900x webp q78" }}
+<style>:root{--manuscript:url("{{ .RelPermalink }}")}</style>
+{{- end }}
+{{ partial "analytics.html" . }}

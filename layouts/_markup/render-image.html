@@ -1,0 +1,10 @@
+{{- /* Finds images stored next to the Markdown file, even when written as /images/x.jpg */ -}}
+{{- $src := .Destination -}}
+{{- $url := $src -}}
+{{- $name := strings.TrimPrefix "./" (strings.TrimPrefix "/" $src) -}}
+{{- with .Page.Resources.Get $name }}{{ $url = .RelPermalink }}{{ end -}}
+{{- if .Title -}}
+<figure><img src="{{ $url }}" alt="{{ .Text }}" loading="lazy"><figcaption>{{ .Title | markdownify }}</figcaption></figure>
+{{- else -}}
+<img src="{{ $url }}" alt="{{ .Text }}" loading="lazy">
+{{- end -}}

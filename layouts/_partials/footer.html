@@ -1,0 +1,16 @@
+<footer class="site-footer">
+<div class="wrap">
+<div class="who">
+<span class="disc">{{ with (resources.Get "media/icon.png").Resize "96x96 png" }}<img src="{{ .RelPermalink }}" alt="">{{ end }}</span>
+<span>{{ site.Params.name }} · {{ site.Params.location }}</span>
+</div>
+<nav aria-label="Contact">
+{{ with site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+{{ with site.Params.scholar }}<a href="{{ . }}">Scholar</a>{{ end }}
+{{ with site.Params.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+{{ with site.Params.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+<a href="{{ site.Params.cv | relURL }}">CV</a>
+</nav>
+<div class="small">© {{ now.Year }} {{ site.Params.name }}</div>
+</div>
+</footer>

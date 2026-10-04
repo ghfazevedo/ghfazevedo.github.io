@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+<div class="programs-full" style="padding-bottom:40px">
+{{ range $i, $p := .Params.programs }}
+<section class="program c{{ add $i 1 }}" id="program-{{ add $i 1 }}">
+<div class="program-fig">{{ with $.Resources.Get $p.image }}<img src="{{ (.Fit "1000x760 webp q85").RelPermalink }}" alt="{{ $p.alt | default "" }}" loading="lazy">{{ end }}</div>
+<div>
+<div class="card-num">PROGRAM {{ printf "%02d" (add $i 1) }}</div>
+<h2>{{ $p.title }}</h2>
+<div class="program-text">{{ $p.text | default $p.summary | markdownify }}</div>
+</div>
+</section>
+{{ end }}
+</div>
+{{ with .Content }}<div class="article prose" style="border-top:1px solid var(--rule);padding-top:24px">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

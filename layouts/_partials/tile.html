@@ -1,0 +1,16 @@
+{{- /* A tile for Teaching / Codes landing pages */ -}}
+{{- $href := .Params.external_link | default .RelPermalink -}}
+{{- $img := .Resources.GetMatch "featured.*" -}}
+<a class="tile" href="{{ $href }}">
+{{- if $img }}
+<div class="tile-fig"><img src="{{ ($img.Fit "720x480 webp q82").RelPermalink }}" alt="" loading="lazy"></div>
+{{- else }}
+<div class="tile-fig empty"><img src="{{ ((resources.Get "media/icon-ink.png").Resize "240x webp").RelPermalink }}" alt="" loading="lazy"></div>
+{{- end }}
+<div class="tile-body">
+{{ with .Params.label }}<div class="tile-label">{{ . }}</div>{{ end }}
+<div class="tile-title">{{ .Title }}</div>
+{{ with .Params.summary }}<div class="tile-text">{{ . | markdownify }}</div>{{ end }}
+<div class="tile-go">{{ .Params.link_text | default (cond (isset .Params "external_link") "Open ↗" "Open →") }}</div>
+</div>
+</a>

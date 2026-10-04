@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+{{ with .Content }}<div class="article prose">{{ . }}</div>{{ end }}
+{{ with .Pages }}
+<div class="tiles">
+{{ range .ByWeight }}{{ partial "tile.html" . }}{{ end }}
+</div>
+{{ end }}
+</div>
+{{ end }}

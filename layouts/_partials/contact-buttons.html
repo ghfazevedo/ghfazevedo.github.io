@@ -1,0 +1,6 @@
+<div class="btns">
+<a class="btn primary" href="{{ site.Params.cv | relURL }}">{{ partial "icon.html" "download" }}Download CV</a>
+{{ with site.Params.scholar }}<a class="btn" href="{{ . }}">{{ partial "icon.html" "scholar" }}Google Scholar</a>{{ end }}
+{{ with site.Params.github }}<a class="btn" href="{{ . }}">{{ partial "icon.html" "github" }}GitHub</a>{{ end }}
+{{ with site.Params.email }}<a class="btn" href="mailto:{{ . }}">{{ partial "icon.html" "mail" }}Email</a>{{ end }}
+</div>

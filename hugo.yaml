@@ -1,0 +1,81 @@
+# ─────────────────────────────────────────────────────────────
+#  Site settings — Guilherme Azevedo
+#  Most things you will want to change are under `params:`.
+# ─────────────────────────────────────────────────────────────
+
+baseURL: https://ghfazevedo.github.io/
+title: Guilherme Azevedo
+locale: en-US
+disableKinds: [taxonomy, term, rss]
+enableRobotsTXT: true
+removePathAccents: true
+
+# Files that Hugo should ignore inside content/
+ignoreFiles: ['\.docx$', '\.pptx$', '\.txt$', '\.ipynb$', '_cache$']
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true        # allows HTML inside Markdown files
+  highlight:
+    noClasses: true
+    style: github
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+imaging:
+  resampleFilter: lanczos
+  jpeg:
+    quality: 82
+  webp:
+    quality: 82
+
+outputs:
+  home: [HTML]
+  section: [HTML]
+
+# ── Top menu ────────────────────────────────────────────────
+menus:
+  main:
+    - name: Research
+      pageRef: /research
+      weight: 10
+    - name: Publications
+      pageRef: /publications
+      weight: 20
+    - name: Teaching
+      pageRef: /teaching
+      weight: 30
+    - name: Codes
+      pageRef: /codes
+      weight: 40
+
+# ── Personal information (used all over the site) ───────────
+params:
+  name: Guilherme Azevedo
+  author_short: G. H. F. Azevedo
+  tagline: Evolutionary biologist · Arachnologist
+  position: # Visiting Research Fellow · Department of Entomology, Cornell University
+  location: Ithaca, NY
+  description: >-
+    I'm an evolutionary biologist studying how spiders and other
+    arthropods diversify, from genes and populations to species and clades.
+
+  # Links
+  email: ghfazevedo@gmail.com
+  scholar: https://scholar.google.com/citations?hl=en&user=PUGcJV8AAAAJ
+  github: https://github.com/ghfazevedo
+  bluesky: https://bsky.app/profile/ghfazevedo.bsky.social
+
+  # CV: put the PDF in static/uploads/ and write its name here.
+  cv: /uploads/GHFA_CV_09_2026.pdf
+
+  # How your name appears in author lists (it is shown in bold on the publications list).
+  # This is a regular expression; it matches "Azevedo, G.H.F." and "Azevedo, G.", with or without *
+  me_regex: 'Azevedo, G\.(?:\s?H\.\s?F\.)?\*?'
+
+  # Visitor statistics (GoatCounter). Create a free account at https://www.goatcounter.com,
+  # then write the code you chose (e.g. "ghfazevedo") below. Leave empty to disable.
+  # Visits are counted only on the published site, never in the local preview.
+  goatcounter: "ghfazevedo"

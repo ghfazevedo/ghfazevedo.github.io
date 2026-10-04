@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{- $all := hugo.Data.publications -}}
+{{- $review := where $all "status" "!=" nil -}}
+{{- $published := where $all "status" "==" nil -}}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
+<div class="btns">
+<a class="btn primary" href="{{ site.Params.cv | relURL }}">{{ partial "icon.html" "download" }}Download CV (PDF)</a>
+{{ with site.Params.scholar }}<a class="btn" href="{{ . }}">{{ partial "icon.html" "scholar" }}Google Scholar</a>{{ end }}
+<span class="pub-note">{{ len $published }} peer-reviewed{{ with $review }} · {{ len . }} in review{{ end }} · * equal contribution</span>
+</div>
+</header>
+<div class="pub-list">
+{{ with $review }}
+<div class="year"><div class="year-label">In review</div><div class="year-items">{{ range . }}{{ partial "pub.html" . }}{{ end }}</div></div>
+{{ end }}
+{{ $years := slice }}{{ range $published }}{{ $years = $years | append .year }}{{ end }}
+{{ range (sort ($years | uniq) "value" "desc") }}
+{{ $y := . }}
+<div class="year"><div class="year-label">{{ $y }}</div><div class="year-items">{{ range where $published "year" $y }}{{ partial "pub.html" . }}{{ end }}</div></div>
+{{ end }}
+</div>
+</div>
+{{ end }}

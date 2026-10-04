@@ -1,0 +1,20 @@
+{{- /* One publication entry from data/publications.yaml */ -}}
+{{- $p := . -}}
+{{- $url := "" }}{{ with $p.doi }}{{ $url = printf "https://doi.org/%s" . }}{{ else }}{{ with $p.preprint }}{{ $url = . }}{{ end }}{{ end -}}
+<article class="pub">
+{{ partial "thumb.html" (dict "img" $p.image) }}
+<div class="pub-body">
+{{ if $url }}<a class="pub-title" href="{{ $url }}">{{ $p.title | markdownify }}</a>{{ else }}<span class="pub-title">{{ $p.title | markdownify }}</span>{{ end }}
+<div class="pub-authors">{{ replaceRE (printf "(%s)" site.Params.me_regex) "<b>$1</b>" (htmlEscape $p.authors) | safeHTML }}</div>
+<div class="pub-meta">
+<span class="pub-journal"><i>{{ $p.journal }}</i>{{ with $p.volume }} {{ . }}{{ end }}{{ with $p.status }} · {{ . }}{{ end }}</span>
+<span class="pub-links">
+{{- with $p.doi }}<a href="https://doi.org/{{ . }}">DOI ↗</a>{{ end }}
+{{- with $p.preprint }}<a href="{{ . }}">Preprint ↗</a>{{ end }}
+{{- with $p.pdf }}<a href="{{ . | relURL }}">PDF ↗</a>{{ end }}
+{{- with $p.code }}<a href="{{ . }}">Code ↗</a>{{ end }}
+{{- with $p.data }}<a href="{{ . }}">Data ↗</a>{{ end }}
+</span>
+</div>
+</div>
+</article>
