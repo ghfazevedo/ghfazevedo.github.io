@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+{{ with .Content }}<div class="article prose" style="padding-bottom:24px">{{ . }}</div>{{ end }}
+
+<div class="events">
+{{ range .Params.events }}
+{{- $e := . -}}
+{{- /* Photos: those listed under "photos:" (file + caption), or every image in the event's folder */ -}}
+{{- $items := slice -}}
+{{- with $e.photos -}}
+  {{- range . -}}
+    {{- $cap := .caption | default "" -}}
+    {{- with $.Resources.Get (printf "%s/%s" $e.folder .file) }}{{ $items = $items | append (dict "img" . "caption" $cap) }}{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range $.Resources.Match (printf "%s/*" $e.folder) -}}
+    {{- if eq .ResourceType "image" }}{{ $items = $items | append (dict "img" . "caption" "") }}{{ end -}}
+  {{- end -}}
+{{- end }}
+<section class="event">
+<header class="event-head">
+<h2>{{ $e.title }}</h2>
+{{ with (delimit (slice $e.place $e.year | complement (slice nil "")) " · ") }}<div class="event-meta">{{ . }}</div>{{ end }}
+</header>
+{{ with $e.text }}<div class="event-text">{{ . | markdownify }}</div>{{ end }}
+{{ with $items }}
+<div class="gallery">
+{{ range . }}
+<figure>
+<a href="{{ (.img.Fit "1800x1800 webp q85").RelPermalink }}" class="gal-link" data-caption="{{ .caption | markdownify | plainify }}">
+<img src="{{ (.img.Fill "600x450 smart webp q80").RelPermalink }}" alt="{{ .caption | markdownify | plainify }}" loading="lazy">
+</a>
+{{ with .caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{ end }}
+</div>
+{{ end }}
+{{ with $e.credits }}<p class="event-credits">{{ . | markdownify }}</p>{{ end }}
+</section>
+{{ end }}
+</div>
+</div>
+{{ partial "lightbox.html" . }}
+{{ end }}

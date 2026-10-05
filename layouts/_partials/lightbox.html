@@ -1,0 +1,15 @@
+{{- /* Click-to-enlarge viewer for any link with class "gal-link" */ -}}
+<dialog class="lightbox" aria-label="Image">
+<button type="button" class="lb-close" aria-label="Close">×</button>
+<img src="" alt=""><p class="lb-cap"></p>
+</dialog>
+<script>
+(function(){
+  var d=document.querySelector('.lightbox'); if(!d||!d.showModal) return;
+  var im=d.querySelector('img'), cap=d.querySelector('.lb-cap');
+  document.querySelectorAll('.gal-link').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();im.src=a.href;im.alt=a.dataset.caption||'';cap.textContent=a.dataset.caption||'';d.showModal();});
+  });
+  d.addEventListener('click',function(e){ if(e.target===d||e.target.classList.contains('lb-close')) d.close(); });
+})();
+</script>

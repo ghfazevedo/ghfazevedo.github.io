@@ -50,6 +50,9 @@ menus:
     - name: Codes
       pageRef: /codes
       weight: 40
+    - name: Outreach
+      pageRef: /outreach
+      weight: 50
 
 # ── Personal information (used all over the site) ───────────
 params:

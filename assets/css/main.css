@@ -334,3 +334,17 @@ a.pub-title:hover { color: var(--link); }
 .tile-fig.empty img { width: 40%; height: 40%; }
 .tile-body { flex: 1; }
 .tile-go { margin-top: auto; }
+
+/* ── Outreach page: one gallery per event ─────────────────── */
+.events { padding-bottom: 96px; }
+.event { padding: 40px 0; border-top: 1px solid var(--rule); }
+.event-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 14px; }
+.event-head h2 { font-size: 30px; }
+.event-meta { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--sepia); text-transform: uppercase; }
+.event-text { max-width: 760px; color: var(--ink-2); margin-bottom: 22px; }
+.event-text p { margin: 0 0 .6em; }
+.event .gallery { padding-top: 6px; }
+
+/* Outreach: photo credits under each album */
+.event-credits { font-size: 13px; color: var(--sepia); margin: 14px 0 0; font-style: italic; }
+.event-credits a { color: var(--sepia); }

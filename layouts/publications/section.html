@@ -9,7 +9,7 @@
 <div class="btns">
 <a class="btn primary" href="{{ site.Params.cv | relURL }}">{{ partial "icon.html" "download" }}Download CV (PDF)</a>
 {{ with site.Params.scholar }}<a class="btn" href="{{ . }}">{{ partial "icon.html" "scholar" }}Google Scholar</a>{{ end }}
-<span class="pub-note">{{ len $published }} peer-reviewed{{ with $review }} · {{ len . }} in review{{ end }} · * equal contribution</span>
+<span class="pub-note">{{/* {{ len $published }} peer-reviewed{{ with $review }} · {{ len . }} in review{{ end }} ·*/}} * equal contribution</span>
 </div>
 </header>
 <div class="pub-list">
