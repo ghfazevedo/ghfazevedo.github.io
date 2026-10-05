@@ -11,7 +11,7 @@ enableRobotsTXT: true
 removePathAccents: true
 
 # Files that Hugo should ignore inside content/
-ignoreFiles: ['\.docx$', '\.pptx$', '\.txt$', '\.ipynb$', '_cache$']
+ignoreFiles: ['\.ai$', '\.psd$', '\.docx$', '\.pptx$', '\.txt$', '\.ipynb$', '_cache$']
 
 markup:
   goldmark:

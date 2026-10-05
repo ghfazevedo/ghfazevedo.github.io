@@ -1,11 +1,14 @@
 # NEWS — newest first. The home page shows the first 5.
 # date: any text ("2026", "Sep 2026" ...); text: Markdown allowed.
+# Optional photo: save it in assets/media/news/ and add  image: file.jpg  (and  alt: short description)
 
-- date: "2026"
-  text: Species-delimitation paper on Brazilian wandering spiders out in *Evolution*.
-- date: "2026"
-  text: TraDeRProS — trait-dependent protracted speciation in RevBayes — preprint available.
+- date: "June 2026"
+  text: Paper on Brazilian wandering spiders cover of [*Evolution*](https://academic.oup.com/evolut/article-abstract/80/6/1243/8527609). Big thanks to Pedro Martins for the picture!
+  image: EVOLUT_80_6_Cover.png
+  alt: The cover of Evolution journal from June 2026 showing a Brazilian wandering spider in defensive position. By Pedro Martins.
+- date: "June 2026"
+  text: I presented the Traderpros paper at Evolution meeting in Cleveland!
 - date: "2025"
-  text: Joined the Department of Entomology at Cornell as a Visiting Fellow.
-- date: "2025"
-  text: CNPq grant funded — phylogeography of Caatinga arachnids.
+  text: "[CNPq grant funded](https://sites.google.com/view/cavearacno/projetos/projeto-filog-caatinga) — phylogeography of Caatinga arachnids."
+  image: Caatinga.png
+  alt: Arachnids of Caatinga that would be focus of the study. 

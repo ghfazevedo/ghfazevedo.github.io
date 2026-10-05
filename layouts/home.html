@@ -61,7 +61,32 @@
 <h2>News</h2>
 <div class="news">
 {{ range first 5 hugo.Data.news }}
-<div><div class="date">{{ .date }}</div><p>{{ .text | markdownify }}</p></div>
+{{- $n := . -}}
+{{- $img := "" -}}
+{{- with .image }}{{ $img = resources.Get (printf "media/news/%s" .) }}{{ end -}}
+{{- if and $img (gt $img.Height $img.Width) -}}
+{{- /* Portrait image (e.g. a journal cover): small thumbnail beside the text */ -}}
+<div class="news-item has-thumb">
+<a class="news-thumb gal-link" href="{{ ($img.Fit "1400x1400 webp").RelPermalink }}" data-caption="{{ $n.alt | default "" }}" aria-label="Enlarge image">
+<img src="{{ ($img.Resize "240x webp").RelPermalink }}" alt="{{ $n.alt | default "" }}" loading="lazy">
+</a>
+<div>
+<div class="date">{{ .date }}</div>
+<p>{{ .text | markdownify }}</p>
+</div>
+</div>
+{{- else -}}
+{{- /* No image, or a landscape image shown full width under the text */ -}}
+<div class="news-item">
+<div class="date">{{ .date }}</div>
+<p>{{ .text | markdownify }}</p>
+{{ with $img }}
+<a class="gal-link" href="{{ (.Fit "1800x1400 webp").RelPermalink }}" data-caption="{{ $n.alt | default "" }}" aria-label="Enlarge image">
+<img class="news-img" src="{{ (.Fit "800x600 webp").RelPermalink }}" alt="{{ $n.alt | default "" }}" loading="lazy">
+</a>
+{{ end }}
+</div>
+{{- end -}}
 {{ end }}
 </div>
 </div>
@@ -89,4 +114,18 @@
 </div>
 </div>
 </section>
+<dialog class="lightbox" aria-label="Image">
+<button type="button" class="lb-close" aria-label="Close">×</button>
+<img src="" alt=""><p class="lb-cap"></p>
+</dialog>
+<script>
+(function(){
+  var d=document.querySelector('.lightbox'); if(!d||!d.showModal) return;
+  var im=d.querySelector('img'), cap=d.querySelector('.lb-cap');
+  document.querySelectorAll('.gal-link').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();im.src=a.href;im.alt=a.dataset.caption||'';cap.textContent=a.dataset.caption||'';d.showModal();});
+  });
+  d.addEventListener('click',function(e){ if(e.target===d||e.target.classList.contains('lb-close')) d.close(); });
+})();
+</script>
 {{ end }}

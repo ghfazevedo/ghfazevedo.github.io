@@ -2,11 +2,11 @@
 title: Research
 lead: "I study how evolutionary processes connect across scales, from population genomics to species diversification. Integrating phylogenomics, coalescent theory and macroevolutionary modeling, I ask how molecular-level processes shape trait evolution, speciation and biodiversity patterns. My research follows three lines:  
 
-1. [how genomes, environment and performance-related traits interact to drive diversification across micro- and macroevolutionary scales;](#program-1)  
+1. [How genomes, environment and performance-related traits interact to drive diversification across micro- and macroevolutionary scales;](#program-1)  
 
-2. [how population-level processes, informed by genomic data, reveal phenotypic evolution across deep time;](#program-2)  
+2. [How population-level processes, informed by genomic data, reveal phenotypic evolution across deep time;](#program-2)  
 
-3. [how gene flow between divergent species shapes the evolution of sex-related traits and diversification.](#program-3)  
+3. [How gene flow between divergent species shapes the evolution of sex-related traits and diversification.](#program-3)  
   
   
 To address these questions, I combine natural history collections, fieldwork and molecular lab work with bioinformatics and statistical modeling.  

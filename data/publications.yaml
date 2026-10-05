@@ -20,7 +20,8 @@
   journal: Systematic Biology
   status: in review
   preprint: #https://drive.google.com/file/d/1_VGtjYhZAkEJrYH6zTtTtH8YasK1SNu8/view
-  image: traderpros.jpg
+  image: traderpros.png
+  selected: true
 
 - title: "A combined phylogenomic and morphological analysis of the ghost spider subfamily Amaurobioidinae (Araneae: Anyphaenidae)"
   authors: "Ramírez, M.J.*, Azevedo, G.H.F.*, Wilson, J.D., Martínez, L.A., Soto, E.M. and Hedin, M."
@@ -28,6 +29,7 @@
   journal: Systematic Entomology
   status: in review
   preprint: #https://drive.google.com/file/d/1Qc1Iwwsh2eoK7-lnIl6nZ0_Rb7bQszaK/view?usp=drive_link
+  image: Amaurobioidinae.png
 
 - title: "Testing cohesive selective paths and evaluating loss of evolutionary information while delimiting species of Brazilian wandering spiders"
   authors: "Azevedo, G.H.F., Oliveira, U., Santos, F., Brescovit, A. and Santos, A.J."
@@ -36,6 +38,7 @@
   volume: "80: 1243–1263"
   doi: 10.1093/evolut/qpag049
   selected: true
+  image: Phoneutria.png
 
 - title: "Phylogeny and biogeography of harmochirine jumping spiders (Araneae: Salticidae)"
   authors: "Azevedo, G.H.F., Maddison, W. and Hedin, M."
@@ -44,6 +47,7 @@
   volume: "197: 108109"
   doi: 10.1016/j.ympev.2024.108109
   selected: true
+  image: Harmochirina.png
 
 - title: "Evaluating possible anthropogenic impacts on gene flow and loss of genetic diversity in endangered Madla Cave Meshweaver spiders (Hahniidae, *Cicurina madla*)"
   authors: "Azevedo, G.H.F., Blair, J. and Hedin, M."
@@ -51,7 +55,7 @@
   journal: Conservation Genetics
   volume: "25: 149–164"
   doi: 10.1007/s10592-023-01561-y
-  image: cicurina-madla.png
+  image: Cicurina.png
 
 - title: "Convergence, hemiplasy, and correlated evolution impact morphological diversity related to a web-less lifestyle in the two-clawed spiders"
   authors: "Azevedo, G.H.F., Bougie, T., Carboni, M., Hedin, M. and Ramírez, M.J."
@@ -59,7 +63,7 @@
   journal: Insect Systematics and Diversity
   volume: "6(5): 1–14"
   doi: 10.1093/isd/ixac020
-  image: hemiplasy.jpg
+  image: Hemiplasy.png
   selected: true
 
 - title: "Combining genomic, phenotypic and Sanger sequencing data to elucidate the phylogeny of the two-clawed spiders (Dionycha)"
@@ -68,6 +72,7 @@
   journal: Molecular Phylogenetics and Evolution
   volume: "166: 107327"
   doi: 10.1016/j.ympev.2021.107327
+  image: Dionycha.png
 
 - title: "Fossils constrain biogeographical history in a clade of flattened spiders with transcontinental distribution"
   authors: "Azevedo, G.H.F., Parreiras, J.S., Bougie, T., Michalik, P., Wunderlich, J. and Ramírez, M.J."
@@ -75,6 +80,7 @@
   journal: Journal of Biogeography
   volume: "48: 3032–3046"
   doi: 10.1111/jbi.14259
+  image: TrochBiogeo.png
 
 - title: "Twenty years, eight legs, one concept: describing spider biodiversity in *Zootaxa* (Arachnida: Araneae)"
   authors: "Jäger, P., Arnedo, M.A., Azevedo, G.H.F., Baehr, B., Bonaldo, A.B., Haddad, C.R., Harms, D., Hormiga, G., Labarque, F.M., Muster, C. and Ramírez, M.J."
@@ -82,6 +88,7 @@
   journal: Zootaxa
   volume: "4979(1): 131–146"
   doi: 10.11646/zootaxa.4979.1.14
+  image: ZootaxaSpecial.png
 
 - title: "Phylogenomics of peacock spiders and their kin (Salticidae: *Maratus*), with implications for the evolution of male courtship displays"
   authors: "Girard, M.B., Elias, D.O., Azevedo, G., Bi, K., Kasumovic, M.M., Waldock, J.M., Rosenblum, E.B. and Hedin, M."
@@ -89,6 +96,7 @@
   journal: Biological Journal of the Linnean Society
   volume: "132(3): 471–494"
   doi: 10.1093/biolinnean/blaa165
+  image: Maratus.png
 
 - title: "The fossil record of spiders revisited: implications for calibrating trees and evidence for a major faunal turnover since the Mesozoic"
   authors: "Magalhaes, I.L., Azevedo, G.H.F., Michalik, P. and Ramírez, M.J."
@@ -96,6 +104,7 @@
   journal: Biological Reviews
   volume: "95(1): 184–217"
   doi: 10.1111/brv.12559
+  image: FossilPaper.png
 
 - title: "To complicate or to simplify? Phylogenetic tests of complexity trends and genital evolution in ground spiders (Araneae: Dionycha: Gnaphosidae)"
   authors: "Azevedo, G.H.F., Griswold, C.E. and Santos, A.J."
@@ -103,6 +112,7 @@
   journal: Zoological Journal of the Linnean Society
   volume: "184(3): 673–694"
   doi: 10.1093/zoolinnean/zly016
+  image: Complexity.png
 
 - title: "Systematics and evolution of ground spiders revisited (Araneae, Dionycha, Gnaphosidae)"
   authors: "Azevedo, G.H.F., Griswold, C.E. and Santos, A.J."
@@ -117,6 +127,7 @@
   journal: Zootaxa
   volume: "4178: 301"
   doi: 10.11646/zootaxa.4178.3.1
+  image: Apopyllus.png
 
 - title: "Effectiveness of sampling methods and further sampling for accessing spider diversity: a case study in a Brazilian Atlantic rainforest fragment"
   authors: "Azevedo, G.H.F., Faleiro, B.T., Magalhães, I.L.F., Benedetti, A.R., Oliveira, U., Pena-Barbosa, J.P.P., Santos, M.T.T., Vilela, P.F., De Maria, M. and Santos, A.J."
