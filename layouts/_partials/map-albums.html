@@ -1,0 +1,131 @@
+{{- /* Page with a map of pins (pins.csv next to _index.md) and photo albums below.
+       Used by the Fieldwork and Museums pages: {{ partial "map-albums.html" . }} */ -}}
+{{- /* ── Pins from content/fieldwork/pins.csv (first row = column names).
+       Works with comma- or semicolon-separated files (Excel in some languages uses ;) ── */ -}}
+{{- $rows := slice -}}
+{{- with .Resources.Get "pins.csv" -}}
+  {{- $text := strings.TrimPrefix "\ufeff" .Content -}}
+  {{- $first := index (split $text "\n") 0 -}}
+  {{- $delim := cond (and (strings.Contains $first ";") (not (strings.Contains $first ","))) ";" "," -}}
+  {{- $rows = $text | transform.Unmarshal (dict "delimiter" $delim "lazyQuotes" true) -}}
+{{- end -}}
+{{- $pins := slice -}}
+{{- if gt (len $rows) 1 -}}
+  {{- $head := index $rows 0 -}}
+  {{- range after 1 $rows -}}
+    {{- $row := . -}}
+    {{- $p := dict -}}
+    {{- range $i, $k := $head }}{{ $p = merge $p (dict (trim $k " ") (trim (index $row $i | default "") " ")) }}{{ end -}}
+    {{- if and $p.lat $p.lon -}}
+      {{- /* accept decimal commas too (e.g. -19,3) */ -}}
+      {{- $lat := float (replace $p.lat "," ".") }}{{ $lon := float (replace $p.lon "," ".") -}}
+      {{- $approx := eq (lower $p.precision) "approx" -}}
+      {{- /* approximate sites: coordinates rounded to ~10 km before they reach the web page */ -}}
+      {{- if $approx }}{{ $lat = div (math.Round (mul $lat 10)) 10.0 }}{{ $lon = div (math.Round (mul $lon 10)) 10.0 }}{{ end -}}
+      {{- $pins = $pins | append (dict "title" $p.title "lat" $lat "lon" $lon "year" $p.year "type" (lower $p.type) "album" $p.album "note" ($p.note | markdownify | string) "approx" $approx) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+<div class="wrap">
+<header class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+</header>
+
+<div id="fieldmap" class="fieldmap" role="region" aria-label="Map of {{ .Title }} locations"></div>
+<div class="map-legend">
+{{ range $k, $v := .Params.pin_types }}<span class="lg" style="--c: {{ $v.color | safeCSS }}">{{ $v.label }}</span>{{ end }}
+<span class="lg approx-lg">Approximate area</span>
+</div>
+
+{{ with .Content }}<div class="article prose" style="padding-top:28px">{{ . }}</div>{{ end }}
+
+<div class="events">
+{{ range .Params.albums }}
+{{- $e := . -}}
+{{- $items := slice -}}
+{{- with $e.photos -}}
+  {{- range . -}}
+    {{- $cap := .caption | default "" -}}
+    {{- with $.Resources.Get (printf "%s/%s" $e.folder .file) }}{{ $items = $items | append (dict "img" . "caption" $cap) }}{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range $.Resources.Match (printf "%s/*" $e.folder) -}}
+    {{- if eq .ResourceType "image" }}{{ $items = $items | append (dict "img" . "caption" "") }}{{ end -}}
+  {{- end -}}
+{{- end }}
+<section class="event" id="album-{{ $e.folder }}">
+<header class="event-head">
+<h2>{{ $e.title }}</h2>
+<div class="event-meta">
+{{ with (delimit (slice $e.place $e.year | complement (slice nil "")) " · ") }}{{ . }}{{ end }}
+{{ if where $pins "album" $e.folder }}<a href="#fieldmap" class="album-map-link" data-album="{{ $e.folder }}">● on the map</a>{{ end }}
+</div>
+</header>
+{{ with $e.text }}<div class="event-text">{{ . | markdownify }}</div>{{ end }}
+{{ with $items }}
+<div class="gallery">
+{{ range . }}
+<figure>
+<a href="{{ (.img.Fit "1800x1800 webp q85").RelPermalink }}" class="gal-link" data-caption="{{ .caption | markdownify | plainify }}">
+<img src="{{ (.img.Fill "600x450 smart webp q80").RelPermalink }}" alt="{{ .caption | markdownify | plainify }}" loading="lazy">
+</a>
+{{ with .caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{ end }}
+</div>
+{{ end }}
+{{ with $e.credits }}<p class="event-credits">{{ . | markdownify }}</p>{{ end }}
+</section>
+{{ end }}
+</div>
+</div>
+{{ partial "lightbox.html" . }}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+(function () {
+  var pins = {{ $pins | jsonify | safeJS }};
+  var types = {{ .Params.pin_types | default dict | jsonify | safeJS }};
+  var el = document.getElementById('fieldmap');
+  if (!window.L || !el) { if (el) el.innerHTML = '<p class="map-error">The map could not be loaded.</p>'; return; }
+
+  var map = L.map(el, { scrollWheelZoom: false, worldCopyJump: true });
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 17,
+    attribution: 'Tiles &copy; Esri — Esri, HERE, Garmin, USGS, NGA, and other contributors'
+  }).addTo(map);
+  el.addEventListener('click', function () { map.scrollWheelZoom.enable(); });
+
+  var cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40 });
+  var byAlbum = {};
+  pins.forEach(function (p) {
+    var color = (types[p.type] && types[p.type].color) || '#1E6B66';
+    var m = p.approx
+      ? L.circleMarker([p.lat, p.lon], { radius: 14, weight: 1.5, color: color, fillColor: color, fillOpacity: .25, dashArray: '3 3' })
+      : L.circleMarker([p.lat, p.lon], { radius: 7, weight: 2, color: '#fff', fillColor: color, fillOpacity: 1 });
+    var label = p.title + (p.year ? '<span class="y">' + p.year + '</span>' : '');
+    m.bindTooltip(label, { className: 'pin-tip', direction: 'top', offset: [0, -6] });
+    var card = '<strong>' + p.title + '</strong>' + (p.year ? '<div class="y">' + p.year + (p.approx ? ' · approximate location' : '') + '</div>' : '')
+             + (p.note ? '<div class="n">' + p.note + '</div>' : '')
+             + (p.album ? '<a class="go" href="#album-' + p.album + '">See photos ↓</a>' : '');
+    m.bindPopup(card, { className: 'pin-pop', maxWidth: 260 });
+    cluster.addLayer(m);
+    if (p.album) { (byAlbum[p.album] = byAlbum[p.album] || []).push([p.lat, p.lon]); }
+  });
+  map.addLayer(cluster);
+  if (pins.length) { map.fitBounds(cluster.getBounds(), { padding: [30, 30], maxZoom: 7 }); } else { map.setView([10, -60], 2); }
+
+  document.querySelectorAll('.album-map-link').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var pts = byAlbum[a.dataset.album]; if (!pts) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function () { map.fitBounds(pts, { padding: [40, 40], maxZoom: 9 }); }, 350);
+    });
+  });
+})();
+</script>

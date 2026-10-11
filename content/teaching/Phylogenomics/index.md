@@ -5,7 +5,14 @@ summary: Tutorial used in the UFMG graduate course (in Portuguese).
 date: 2021-11-30
 toc: true
 link_text: Open tutorial →
-weight: 10
+weight: 1
+# Language switch; the English version has the tile on the Teaching page
+lang_label: Português
+translations:
+  - label: English
+    url: /teaching/phylogenomics-en/
+build:
+  list: never
 ---
 
 
@@ -1195,7 +1202,7 @@ Agora podemos aplicar filtros na matriz, por exemplo, removendo genes que tenham
 -eq igual (equal)  
 ... dentre outros (veja mais detalhes na Figura 2 e [neste link](https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php).
 
-![*if operators*](/home/ghfa/GHFA/Classes/Filogenomica_UFMG/Images/if_statement.JPG)
+![*if operators*](/images/if_statement.JPG)
   
 Exemplo:
 ```bash

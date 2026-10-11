@@ -1,0 +1,9 @@
+{{- /* GitHub-style notes:  > [!NOTE]  > [!TIP]  > [!IMPORTANT]  > [!WARNING]  > [!CAUTION] */ -}}
+{{- if eq .Type "alert" -}}
+<blockquote class="alert alert-{{ .AlertType }}">
+<p class="alert-title">{{ .AlertTitle | default (.AlertType | strings.FirstUpper) }}</p>
+{{ .Text }}
+</blockquote>
+{{- else -}}
+<blockquote>{{ .Text }}</blockquote>
+{{- end -}}

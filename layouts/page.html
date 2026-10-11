@@ -3,11 +3,16 @@
 <header class="page-head">
 {{ with .Params.label }}<div class="kicker">{{ . }}</div>{{ end }}
 <h1>{{ .Title }}</h1>
+{{ with .Params.translations }}<nav class="lang-switch" aria-label="Language">{{ with $.Params.lang_label }}<span class="current">{{ . }}</span>{{ end }}{{ range . }}<a href="{{ .url | relURL }}" hreflang="{{ .lang | default "" }}">{{ .label }}</a>{{ end }}</nav>{{ end }}
 {{ with .Params.lead }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
 </header>
 <article class="article prose">
-{{ if .Params.toc }}<details class="toc" open><summary>Contents</summary>{{ .TableOfContents }}</details>{{ end }}
-{{ .Content }}
+{{ with .Params.readme }}
+  {{ partial "remote-readme.html" (dict "page" $ "url" .) }}
+{{ else }}
+  {{ if .Params.toc }}<details class="toc" open><summary>Contents</summary>{{ .TableOfContents }}</details>{{ end }}
+  {{ .Content }}
+{{ end }}
 </article>
 </div>
 {{ end }}

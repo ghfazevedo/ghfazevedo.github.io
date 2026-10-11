@@ -348,3 +348,48 @@ a.pub-title:hover { color: var(--link); }
 /* Outreach: photo credits under each album */
 .event-credits { font-size: 13px; color: var(--sepia); margin: 14px 0 0; font-style: italic; }
 .event-credits a { color: var(--sepia); }
+
+/* ── Tutorials loaded from GitHub (readme: in front matter) ─ */
+.readme-source { font-family: var(--mono); font-size: 13px; color: var(--sepia); padding: 10px 14px; background: var(--band); border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 2em; }
+.readme-error { color: var(--p3); }
+.toc li.toc-h3 { margin-left: 1.2em; font-size: 14px; }
+.toc ul { list-style: none; padding-left: 0; }
+.toc li { margin: .2em 0; }
+.prose img { max-width: 100%; height: auto; }
+.prose figure { text-align: center; }
+
+/* GitHub-style alert boxes */
+.prose blockquote.alert { border-left: 4px solid var(--link); background: var(--band); padding: 12px 18px; border-radius: 0 6px 6px 0; color: var(--ink-2); }
+.prose blockquote.alert p:last-child { margin-bottom: 0; }
+.alert-title { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; margin-bottom: .4em !important; color: var(--link); }
+.alert-important { border-left-color: var(--p2) !important; } .alert-important .alert-title { color: var(--p2); }
+.alert-warning, .alert-caution { border-left-color: var(--p3) !important; } .alert-warning .alert-title, .alert-caution .alert-title { color: var(--p3); }
+.alert-tip { border-left-color: var(--p1) !important; } .alert-tip .alert-title { color: var(--p1); }
+
+/* Small inline images inside tables (e.g. colour swatches) stay on the same line */
+.prose td img, .prose th img { display: inline-block; margin: 0 2px; vertical-align: middle; border-radius: 2px; }
+
+/* Language switch on translated pages (lang_label + translations in front matter) */
+.lang-switch { display: inline-flex; align-self: flex-start; border: 1px solid var(--rule-2); border-radius: 999px; overflow: hidden; font-family: var(--mono); font-size: 13px; }
+.lang-switch > * { padding: 6px 14px; text-decoration: none; }
+.lang-switch .current { background: var(--ink); color: #fff; }
+.lang-switch a { color: var(--ink); }
+.lang-switch a:hover { background: var(--band); color: var(--link); }
+
+/* ── Fieldwork page: map + albums ────────────────────────── */
+.fieldmap { height: 520px; border: 1px solid var(--rule); border-radius: 8px; background: var(--band); z-index: 0; }
+.map-error { padding: 24px; color: var(--sepia); }
+.map-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 14px 0 8px; font-size: 14px; color: var(--sepia); }
+.map-legend .lg::before { content: ""; display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; background: var(--c); border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+.map-legend .approx-lg::before { background: rgba(106,90,75,.18); border: 1.5px dashed var(--sepia); box-shadow: none; width: 13px; height: 13px; }
+.leaflet-tooltip.pin-tip { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 6px 16px rgba(34,28,23,.15); padding: 5px 10px; }
+.leaflet-tooltip.pin-tip .y { font-family: var(--mono); font-weight: 400; font-size: 12px; color: var(--sepia); margin-left: 6px; }
+.pin-pop .leaflet-popup-content { font-family: var(--sans); font-size: 14px; line-height: 1.45; margin: 12px 14px; }
+.pin-pop strong { font-family: var(--serif); font-weight: 500; font-size: 17px; }
+.pin-pop .y { font-family: var(--mono); font-size: 12px; color: var(--sepia); margin: 2px 0 6px; }
+.pin-pop .n p { margin: 0 0 6px; }
+.pin-pop .go { font-weight: 600; text-decoration: none; }
+.marker-cluster-small, .marker-cluster-medium, .marker-cluster-large { background: rgba(30,107,102,.25); }
+.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div { background: #1E6B66; color: #fff; font-family: var(--mono); font-weight: 500; }
+.album-map-link { margin-left: 12px; text-decoration: none; text-transform: none; letter-spacing: 0; font-family: var(--sans); font-size: 14px; font-weight: 600; }
+@media (max-width: 860px) { .fieldmap { height: 380px; } }

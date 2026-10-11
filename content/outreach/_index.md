@@ -30,11 +30,6 @@ events:
     year: 2017
     folder: noche_de_los_museos_2017
     credits: "Photos: Martín Ramirez"	
-  - title: Noche de Los Museos
-    place: Museo Argentino de Ciencias Naturales
-    year: 2017
-    folder: noche_de_los_museos_2017
-    credits: "Photos: Martín Ramirez"
   - title: Night Life
     place: California Academy of Sciences
     year: 2014

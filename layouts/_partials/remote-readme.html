@@ -1,0 +1,48 @@
+{{- /*
+  Shows a Markdown file stored on GitHub (e.g. a repository README) inside this page.
+  Use it by adding to the page front matter:
+     readme: https://raw.githubusercontent.com/OWNER/REPO/BRANCH/README.md
+  The file is downloaded every time the site is built, so edits on GitHub
+  appear after the next build (the publish workflow rebuilds the site daily).
+*/ -}}
+{{- $page := .page -}}
+{{- $url := .url -}}
+{{- $re := `^https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/([^/]+)/(.*)$` -}}
+{{- $rawBase := replaceRE `[^/]*$` "" $url -}}
+{{- $blobBase := replaceRE `[^/]*$` "" (replaceRE $re "https://github.com/$1/$2/blob/$3/$4" $url) -}}
+{{- $repo := replaceRE $re "https://github.com/$1/$2" $url -}}
+
+<p class="readme-source">This tutorial is maintained on GitHub — <a href="{{ $repo }}">view the repository ↗</a></p>
+
+{{- with try (resources.GetRemote $url) -}}
+  {{- with .Err -}}
+    {{- warnf "Could not download %s: %s" $url . -}}
+    <p class="readme-error">The tutorial could not be loaded right now. Please read it directly on <a href="{{ $repo }}">GitHub</a>.</p>
+  {{- else with .Value -}}
+    {{- $md := .Content -}}
+    {{- /* Drop the README's own top-level title (the page already shows one) */ -}}
+    {{- $md = replaceRE `\A\s*#[^#\n][^\n]*\n` "" $md 1 -}}
+    {{- $html := $page.RenderString (dict "display" "block") $md -}}
+    {{- /* Point relative images to the raw files and relative links to GitHub */ -}}
+    {{- $html = replace $html `src="` (printf `src="%s` $rawBase) -}}
+    {{- range slice "http" "//" "data:" "/" -}}
+      {{- $html = replace $html (printf `src="%s%s` $rawBase .) (printf `src="%s` .) -}}
+    {{- end -}}
+    {{- $html = replace $html `href="` (printf `href="%s` $blobBase) -}}
+    {{- range slice "http" "//" "#" "mailto:" "/" -}}
+      {{- $html = replace $html (printf `href="%s%s` $blobBase .) (printf `href="%s` .) -}}
+    {{- end -}}
+    {{- /* Table of contents built from the README headings */ -}}
+    {{- if $page.Params.toc -}}
+      {{- $heads := findRESubmatch `<h([23]) id="([^"]+)">(.*?)</h[23]>` $html -}}
+      {{- with $heads -}}
+      <details class="toc" open><summary>Contents</summary><ul>
+      {{- range . -}}
+        <li class="toc-h{{ index . 1 }}"><a href="#{{ index . 2 }}">{{ index . 3 | plainify | safeHTML }}</a></li>
+      {{- end -}}
+      </ul></details>
+      {{- end -}}
+    {{- end -}}
+    {{ $html | safeHTML }}
+  {{- end -}}
+{{- end -}}

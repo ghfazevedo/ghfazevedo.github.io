@@ -6,14 +6,14 @@ photo_caption: "Bowie and me" # optional
 # Photo gallery (below the text). Either list photos here with captions…
 #gallery_title: Field and life        # optional heading
 gallery:
-  - file: GuiBryceCanyon.jpeg
-    caption: Bryce Canyon
+#  - file: GuiBryceCanyon.jpeg
+#    caption: Bryce Canyon, Utah
   - file: 4_b_Hobbies.jpeg
     caption: Palm Springs, California
   - file: GuiProfile03.jpeg
-    caption: Grsn Teton,Wyoming 
-#  - file: Guilherme_Charles_CAS_II_2.16.2014.JPG
-#    caption: With Charles Griswold. California Academy of Sciences, 2014
+    caption: Gran Teton, Wyoming 
+  - file: GuiPlaying.jpg
+    caption: San Diego, 2019
 ---
 
 I am a biologist curious about the evolutionary trajectories of organisms that led to the astonishing diversity of life, as well as about the role of the environment in driving species through their path. I am into studying spiders and other arachnids. They are extraordinarily diverse, serving as a great system for investigating biological questions spanning many disciplines and fields. I am particularly interested in studying spiders integrating the fields of population genomics, phylogenetics, ecology and biogeography. For my research I use invaluable information from museum collections as well as data from field work. I am passionate about sharing what I continuously learn through teaching and outreach activities. It is important to pass along our discoveries to the general public creating a sene of awareness and admiration for nature. Only then we will be able to effectively conserve biodiversity for future generations. In this website you can learn a little bit more about me, my research, teaching and outreach

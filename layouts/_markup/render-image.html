@@ -1,8 +1,11 @@
-{{- /* Finds images stored next to the Markdown file, even when written as /images/x.jpg */ -}}
+{{- /* Finds images stored next to the Markdown file, even when written as /images/x.jpg.
+       A page can also borrow images from another page with  resources_from: /path/to/page  */ -}}
 {{- $src := .Destination -}}
 {{- $url := $src -}}
 {{- $name := strings.TrimPrefix "./" (strings.TrimPrefix "/" $src) -}}
-{{- with .Page.Resources.Get $name }}{{ $url = .RelPermalink }}{{ end -}}
+{{- $r := .Page.Resources.Get $name -}}
+{{- if not $r }}{{ with .Page.Params.resources_from }}{{ with site.GetPage . }}{{ $r = .Resources.Get $name }}{{ end }}{{ end }}{{ end -}}
+{{- with $r }}{{ $url = .RelPermalink }}{{ end -}}
 {{- if .Title -}}
 <figure><img src="{{ $url }}" alt="{{ .Text }}" loading="lazy"><figcaption>{{ .Title | markdownify }}</figcaption></figure>
 {{- else -}}

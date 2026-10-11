@@ -31,6 +31,11 @@ imaging:
   webp:
     quality: 82
 
+# Files downloaded from the web (e.g. GitHub READMEs) are refreshed every 30 minutes in the local preview
+caches:
+  getresource:
+    maxAge: 30m
+
 outputs:
   home: [HTML]
   section: [HTML]
@@ -50,6 +55,12 @@ menus:
     - name: Codes
       pageRef: /codes
       weight: 40
+    - name: Fieldwork
+      pageRef: /fieldwork
+      weight: 45
+    - name: Museums
+      pageRef: /museums
+      weight: 47
     - name: Outreach
       pageRef: /outreach
       weight: 50
