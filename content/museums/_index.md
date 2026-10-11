@@ -1,6 +1,6 @@
 ---
 title: Museums
-lead: Natural history collections where I have studied specimens.
+lead: One important (and very fun!) part of my work is spending time in natural history collections. Here are a few pictures from museums I have visited to “collect” specimens for my research.
 
 # Keep pins.csv off the public site; only the map uses it
 build:
