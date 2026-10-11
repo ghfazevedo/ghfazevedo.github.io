@@ -29,33 +29,33 @@ pin_types:
 #   Pins whose "album" column has this folder name get a "● on the map" link here.
 # ─────────────────────────────────────────────────────────────
 albums:
-  - title: California Academy of Sciences (CAS)
-    place: San Francisco, California
-    year: 2014
-    folder: cas-2014
+  - title: San Diego State University Biodiversity Museum, Genomics Arachnid Collection
+    place: San Diego, CA
+    year: 2020
+    folder: sdsu-2020
     text: ""          # optional short description (Markdown allowed)
     credits: ""       # optional photo credits
     # photos:
     #   - file: photo1.jpg
     #     caption: Working in the arachnology collection
-  - title: American Museum of Natural History (AMNH)
-    place: New York, NY
-    year: 2014
-    folder: amnh-2014
-  - title: "Museu Paraense Emílio Goeldi (MPEG)"
-    place: Belém, PA
-    year: 2010
-    folder: goeldi-2010
-  - title: Museum of Comparative Zoology - Harvard University (MCZ)
-    place: Cambridge, MA
-    year: 2014
-    folder: mcz-2014
   - title: Muséum National d'Histoire Naturelle (MNHN)
     place: Paris, France
     year: 2016
     folder: mnhn-2016
-  - title: San Diego State University Biodiversity Museum, Genomics Arachnid Collection
-    place: San Diego, CA
-    year: 2020
-    folder: sdsu-2020
+  - title: California Academy of Sciences (CAS)
+    place: San Francisco, California
+    year: 2014
+    folder: cas-2014
+  - title: American Museum of Natural History (AMNH)
+    place: New York, NY
+    year: 2014
+    folder: amnh-2014
+  - title: Museum of Comparative Zoology - Harvard University (MCZ)
+    place: Cambridge, MA
+    year: 2014
+    folder: mcz-2014
+  - title: "Museu Paraense Emílio Goeldi (MPEG)"
+    place: Belém, PA
+    year: 2010
+    folder: goeldi-2010
 ---
