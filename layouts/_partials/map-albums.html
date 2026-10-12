@@ -47,11 +47,11 @@
 {{- with $e.photos -}}
   {{- range . -}}
     {{- $cap := .caption | default "" -}}
-    {{- with $.Resources.Get (printf "%s/%s" $e.folder .file) }}{{ $items = $items | append (dict "img" . "caption" $cap) }}{{ end -}}
+    {{- with $.Resources.Get (printf "%s/%s" $e.folder .file) }}{{ $items = $items | append (dict "img" (images.Filter images.AutoOrient .) "caption" $cap) }}{{ end -}}
   {{- end -}}
 {{- else -}}
   {{- range $.Resources.Match (printf "%s/*" $e.folder) -}}
-    {{- if eq .ResourceType "image" }}{{ $items = $items | append (dict "img" . "caption" "") }}{{ end -}}
+    {{- if eq .ResourceType "image" }}{{ $items = $items | append (dict "img" (images.Filter images.AutoOrient .) "caption" "") }}{{ end -}}
   {{- end -}}
 {{- end }}
 <section class="event" id="album-{{ $e.folder }}">

@@ -1,6 +1,6 @@
 ---
 title: Outreach
-lead: Spreading the word of Arthropods.
+lead: I love to share what I continuously learn wirth people. Here are a few photos from some of the outreach events I participated..
 
 # ─────────────────────────────────────────────────────────────
 # One block per event (newest first). For each event:
@@ -40,4 +40,3 @@ events:
 ---
 
 <!-- Optional introduction text can go here. -->
-I love to share what I continuously learn wirth people. Here are a few photos from some of the outreach events I participated.
