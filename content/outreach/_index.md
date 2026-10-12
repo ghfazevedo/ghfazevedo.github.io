@@ -1,6 +1,6 @@
 ---
 title: Outreach
-lead: I love to share what I continuously learn wirth people. Here are a few photos from some of the outreach events I participated..
+lead: I love to share what I continuously learn with people. Here are a few photos from some of the outreach events I participated..
 
 # ─────────────────────────────────────────────────────────────
 # One block per event (newest first). For each event:
@@ -33,7 +33,7 @@ events:
   - title: Night Life
     place: California Academy of Sciences
     year: 2014
-    folder: night_life_2016	
+    folder: night_life_2014	
 
 
 
