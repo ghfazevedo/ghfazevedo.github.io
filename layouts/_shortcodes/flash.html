@@ -1,0 +1,102 @@
+{{- /*
+  Embed an old Flash movie (.swf) with Ruffle, the open-source Flash emulator in static/ruffle/.
+  Nothing is downloaded until the visitor clicks "Start".
+
+  Usage in a Markdown page:
+    {{< flash src="/teaching/zoologia-virtual/Cdromzoologia.swf" width="700" height="600"
+              poster="featured.jpg" size="47 MB" >}}
+
+  src     path of the .swf (put it in static/…)
+  width    width of the visible frame in pixels (sets the aspect ratio)
+  height   height of the visible frame in pixels
+  letterbox "on" (default) clips to the movie's stage; "off" also shows artwork drawn
+           outside the stage — use it with a frame wider than the stage
+  poster  optional image shown before starting (file in the page folder)
+  size    optional download size shown on the button
+*/ -}}
+{{- $src := .Get "src" | relURL -}}
+{{- $w := .Get "width" | default "550" -}}
+{{- $h := .Get "height" | default "400" -}}
+{{- $size := .Get "size" -}}
+{{- $letterbox := .Get "letterbox" | default "on" -}}
+{{- $poster := "" -}}
+{{- with .Get "poster" }}{{ with $.Page.Resources.Get . }}{{ $poster = (.Fit "1400x1200 webp q82").RelPermalink }}{{ end }}{{ end -}}
+<div class="flash" style="--flash-ratio: {{ $w }} / {{ $h }}; max-width: {{ $w }}px" data-src="{{ $src }}" data-letterbox="{{ $letterbox }}" data-ruffle="{{ "ruffle/" | relURL }}">
+  <div class="flash-stage">
+    <button type="button" class="flash-start"{{ with $poster }} style="background-image: url('{{ . }}')"{{ end }}>
+      <span class="flash-start-label">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Start{{ with $size }} <span class="flash-size">({{ . }})</span>{{ end }}
+      </span>
+    </button>
+  </div>
+  <div class="flash-bar">
+    <span class="flash-note">Runs in your browser with <a href="https://ruffle.rs" target="_blank" rel="noopener">Ruffle</a>, a Flash emulator.</span>
+    <button type="button" class="flash-fs" hidden>Full screen</button>
+  </div>
+</div>
+{{- if not (.Page.Scratch.Get "flash-js") }}{{ .Page.Scratch.Set "flash-js" true }}
+<script>
+(function () {
+  function loadRuffle(base) {
+    if (window.__ruffleLoading) return window.__ruffleLoading;
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = Object.assign({
+      publicPath: base,
+      autoplay: "on",
+      unmuteOverlay: "hidden",
+      letterbox: "on",
+      contextMenu: "rightClickOnly",
+      warnOnUnsupportedContent: false,
+      showSwfDownload: false
+    }, window.RufflePlayer.config || {});
+    window.__ruffleLoading = new Promise(function (ok, fail) {
+      var s = document.createElement("script");
+      s.src = base + "ruffle.js";
+      s.onload = ok; s.onerror = fail;
+      document.head.appendChild(s);
+    });
+    return window.__ruffleLoading;
+  }
+  document.querySelectorAll(".flash").forEach(function (box) {
+    var start = box.querySelector(".flash-start");
+    var fs = box.querySelector(".flash-fs");
+    var stage = box.querySelector(".flash-stage");
+    var player = null;
+    start.addEventListener("click", function () {
+      start.disabled = true;
+      start.querySelector(".flash-start-label").textContent = "Loading…";
+      loadRuffle(box.dataset.ruffle).then(function () {
+        player = window.RufflePlayer.newest().createPlayer();
+        player.className = "flash-player";
+        stage.replaceChildren(player);
+        player.ruffle().load({ url: box.dataset.src, letterbox: box.dataset.letterbox });
+        fs.hidden = false;
+      }).catch(function () {
+        start.querySelector(".flash-start-label").textContent = "Could not load the player.";
+      });
+    });
+    fs.addEventListener("click", function () {
+      var isFs = document.fullscreenElement || document.webkitFullscreenElement;
+      if (isFs) {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      } else {
+        var req = stage.requestFullscreen || stage.webkitRequestFullscreen;
+        if (req) {
+          var r = req.call(stage);
+          if (r && r.catch) r.catch(function () { if (player) player.ruffle().enterFullscreen(); });
+        } else if (player) {
+          player.ruffle().enterFullscreen();
+        }
+      }
+    });
+    ["fullscreenchange", "webkitfullscreenchange"].forEach(function (ev) {
+      document.addEventListener(ev, function () {
+        var on = (document.fullscreenElement || document.webkitFullscreenElement) === stage;
+        fs.textContent = on ? "Exit full screen" : "Full screen";
+      });
+    });
+  });
+})();
+</script>
+{{- end }}

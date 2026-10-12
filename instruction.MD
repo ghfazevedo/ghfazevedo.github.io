@@ -402,6 +402,13 @@ folder, so images are not duplicated.
 Source files like `.docx`, `.pptx`, `.ai` can stay in these folders; `hugo.yaml` → `ignoreFiles` keeps them
 off the site.
 
+**Old Flash (.swf) programs** (`teaching/zoologia-virtual/`): put the `.swf` in `static/…` and embed it with
+`{{</* flash src="/path/file.swf" width="800" height="600" letterbox="off" poster="featured.jpg" size="47 MB" */>}}`.
+It plays through [Ruffle](https://ruffle.rs), an emulator kept in `static/ruffle/` (to update it, replace those files
+with a newer "web-selfhosted" release). Nothing is downloaded until the visitor clicks *Start*.
+`width`/`height` set the frame; `letterbox="off"` also shows artwork drawn outside the movie's stage.
+The shortcode is `layouts/_shortcodes/flash.html`; its styles are at the end of `assets/css/main.css`.
+
 #### 4.4.5 `content/fieldwork/` and `content/museums/` — map + albums
 Both use the same template (`layouts/_partials/map-albums.html`).
 
