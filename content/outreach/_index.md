@@ -24,6 +24,7 @@ events:
     place: San Diego State University
     year: 2023
     folder: Darwin_Day_2023
+    credits: "[Photo](https://biology.sdsu.edu/wp-content/uploads/2023/02/zoology-beetles.jpg) from [SDSU Biology Department](https://biology.sdsu.edu/)"
   - title: Noche de Brujas
     place: Museo Argentino de Ciencias Naturales
     year: 2017
