@@ -20,6 +20,10 @@ events:
     #   - file: photo1.jpg
     #     caption: Showing tarantulas to young visitors
     #   - file: photo2.jpg
+  - title: Darwin Day
+    place: San Diego State University
+    year: 2023
+    folder: Darwin_Day_2023
   - title: Noche de Brujas
     place: Museo Argentino de Ciencias Naturales
     year: 2017
