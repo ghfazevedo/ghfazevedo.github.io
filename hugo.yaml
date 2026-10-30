@@ -83,7 +83,7 @@ params:
   bluesky: https://bsky.app/profile/ghfazevedo.bsky.social
 
   # CV: put the PDF in static/uploads/ and write its name here.
-  cv: /uploads/GHFA_CV_09_2026.pdf
+  cv: /uploads/GHFA_CV_10_2026.pdf
 
   # How your name appears in author lists (it is shown in bold on the publications list).
   # This is a regular expression; it matches "Azevedo, G.H.F." and "Azevedo, G.", with or without *
