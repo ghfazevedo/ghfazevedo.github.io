@@ -55,4 +55,10 @@ albums:
     folder: Chile-2018
     text: ""
     credits: "Photos by Martín Ramírez"
+  - title: "Blodgett Forest 2014"
+    place: "El Dorado County – California, USA "
+    year: 2014
+    folder: BlodgettForest-2014
+    text: "Spiders taxonomy and biology course at Berkeley"
+    credits: ""
 ---
