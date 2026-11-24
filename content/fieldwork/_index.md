@@ -61,4 +61,17 @@ albums:
     folder: BlodgettForest-2014
     text: "Spiders taxonomy and biology course at Berkeley"
     credits: ""
+  - title: "Parque Estadual do Rio Doce, MG."
+    place: "Marliéria, MG, Brazil"
+    year: 2011
+    folder: Marlieria-2011
+    text: ""
+    credits: ""  
+  - title: "Bahia, Brazil 2010"
+    place: "Bahia, Brazil"
+    year: 2010
+    folder: Bahia-2010
+    text: ""
+    credits: ""
+
 ---
