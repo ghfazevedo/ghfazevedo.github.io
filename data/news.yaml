@@ -3,14 +3,14 @@
 # Optional photo: save it in assets/media/news/ and add  image: file.jpg  (and  alt: short description)
 
 - date: "November 2026"
-  text: "Another great collaboarative project with Leonardo Carvalho, Adalberto Santos and other Brazilian and Argentine researchers were funded by CNPq:  The diversification of spiders (Thomisidae and Oxyopidae) in plants!"
+  text: "Another great collaboarative project with Brazilian and Argentine researchers was funded by CNPq: The diversification of spiders in plants!"
   image: CNPq_ThomisidaeOxy.png
 - date: "June 2026"
   text: Paper on Brazilian wandering spiders cover of [*Evolution*](https://academic.oup.com/evolut/article-abstract/80/6/1243/8527609). Big thanks to Pedro Martins for the picture!
   image: EVOLUT_80_6_Cover.png
   alt: The cover of Evolution journal from June 2026 showing a Brazilian wandering spider in defensive position. By Pedro Martins.
-- date: "June 2026"
-  text: I presented the Traderpros paper at Evolution meeting in Cleveland!
+#- date: "June 2026"
+#  text: I presented the Traderpros paper at Evolution meeting in Cleveland!
 - date: "2025"
   text: "[CNPq grant funded](https://sites.google.com/view/cavearacno/projetos/projeto-filog-caatinga) — phylogeography of Caatinga arachnids."
   image: Caatinga.png
